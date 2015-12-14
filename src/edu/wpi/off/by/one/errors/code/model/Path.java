@@ -1,8 +1,10 @@
 package edu.wpi.off.by.one.errors.code.model;
 
+import java.awt.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 import edu.wpi.off.by.one.errors.code.controller.ControllerSingleton;
 
@@ -105,6 +107,7 @@ public class Path {
 	}
 	
 	public void runAccessibleAStar(Graph graphin){
+		System.out.println("accessible");
 		theGraph = graphin;
 		////System.out.println("started a*");
 		ArrayList<Id> visited = new ArrayList<Id>();	//These nodes we have already seen
@@ -173,7 +176,10 @@ public class Path {
 					if(theGraph.returnNodeById(neighborId).isAccessible()){
 						open.add(neighborId);		//add the neighbor to the list of places to go
 					}
-					else continue;
+					else {
+						System.out.println("skipping");
+						continue;
+					}
 					
 				}
 				else if(tentativeGScore>gScore.get(neighborId)){	//if this path to this node isn't better than the existing one
@@ -299,6 +305,95 @@ public class Path {
 		return route;
 	}
 	/**
+	 * 
+	 * @param StartID the location to find the nearest food to.
+	 * @return the nearest location for food by linear distance
+	 */
+	public Id findNearestFood(Id startID, Graph graphIn){
+		theGraph = graphIn;
+		Node best = null;
+		float bestDist = Float.MAX_VALUE;
+		for(Node elem: theGraph.getNodes()){
+			if(elem.isFood()){
+				float dist = calcHeuristic(startID, elem.getId());
+				if(bestDist>dist){
+					if(!ControllerSingleton.getInstance().getMapRootPane().isAccessibleMode||elem.isAccessible()){
+						best = elem;
+						bestDist = dist;
+					}
+				}
+			}
+		}
+		return best.getId();
+	}
+	/**
+	 * 
+	 * @param StartID the location to find the nearest mens room to.
+	 * @return the nearest mens room by linear distance
+	 */
+	public Id findNearestMensRoom(Id startID, Graph graphIn){
+		theGraph = graphIn;
+		Node best = null;
+		float bestDist = Float.MAX_VALUE;
+		for(Node elem: theGraph.getNodes()){
+			if(elem.isMens()){
+				float dist = calcHeuristic(startID, elem.getId());
+				if(bestDist>dist){
+					if(!ControllerSingleton.getInstance().getMapRootPane().isAccessibleMode||elem.isAccessible()){
+						best = elem;
+						bestDist = dist;
+					}
+				}
+			}
+		}
+		return best.getId();
+	}
+	/**
+	 * 
+	 * @param StartID the location to find the nearest womens room to.
+	 * @return the nearest womens room by linear distance
+	 */
+	public Id findNearestWomensRoom(Id startID, Graph graphIn){
+		theGraph = graphIn;
+		Node best = null;
+		float bestDist = Float.MAX_VALUE;
+		for(Node elem: theGraph.getNodes()){
+			if(elem.isWomens()){
+				float dist = calcHeuristic(startID, elem.getId());
+				if(bestDist>dist){
+					if(!ControllerSingleton.getInstance().getMapRootPane().isAccessibleMode||elem.isAccessible()){
+						best = elem;
+						bestDist = dist;
+					}
+				}
+			}
+		}
+		return best.getId();
+	}
+	/**
+	 * 
+	 * @param StartID the location to find the nearest gender neutral restroom to.
+	 * @return the nearest gender neutral restroom by linear distance
+	 */
+	public Id findNearestGenderNeutralRestroom(Id startID, Graph graphIn){
+		theGraph = graphIn;
+		Node best = null;
+		float bestDist = Float.MAX_VALUE;
+		for(Node elem: theGraph.getNodes()){
+			if(elem.isGenderNeutral()){
+				float dist = calcHeuristic(startID, elem.getId());
+				if(bestDist>dist){
+					if(!ControllerSingleton.getInstance().getMapRootPane().isAccessibleMode||elem.isAccessible()){
+						best = elem;
+						bestDist = dist;
+					}
+
+				}
+			}
+		}
+		return best.getId();
+	}
+	/**
 	 * gets the textual path
 	 * @return the textual path
 	 */
@@ -326,22 +421,30 @@ public class Path {
 					
 					System.out.println(degreedangle);
 					System.out.println(dxangle);
-					if(Math.abs(degreedangle) <= 10){ //determines magnitude of turn
+					if(Math.abs(degreedangle) <= 20){ //determines magnitude of turn
 						distFromTurn += dist;
 					} else if(degreedangle <= 45){
-						res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
+							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurn = dist;
 					} else if (degreedangle <= 90){
-						res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
+							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurn = dist;
 					} else if (degreedangle <= 180){
-						res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
+							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a hard " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurn = dist;
 					} else {
-						res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
+							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a sharp " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurn = dist;
 					}
@@ -362,8 +465,14 @@ public class Path {
 			lastcoord = thiscoord;
 			cnt++;
 		}
-		res.add("Walk for "+ Math.round(distFromTurn) + " meters");
+		if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
+		res.add("Walk for " + Math.round(distFromTurn) + " meters");
 		res.add("You have reached your destination");
+		}else {
+			res.add("Walk for " + Math.round(distFromTurn) + " paces");
+			res.add("You have found the booty");
+		}
+
 		return res;
 	}
 
