@@ -476,4 +476,14 @@ public class Path {
 		return res;
 	}
 
+	public ArrayList<Step> getDirections(){
+		ArrayList<Step> directions = new ArrayList<Step>();
+
+		if(route == null || route.isEmpty()) return null;
+		for(int currentNode = 0; currentNode < route.size(); currentNode++){
+
+		}
+		return directions;
+	}
+
 }

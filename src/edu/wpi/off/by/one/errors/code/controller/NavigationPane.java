@@ -133,6 +133,4 @@ public class NavigationPane extends GridPane{
     }
     //endregion
 
-
-
 }
