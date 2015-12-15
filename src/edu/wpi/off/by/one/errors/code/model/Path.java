@@ -306,7 +306,7 @@ public class Path {
 	}
 	/**
 	 * 
-	 * @param StartID the location to find the nearest food to.
+	 * @param startID the location to find the nearest food to.
 	 * @return the nearest location for food by linear distance
 	 */
 	public Id findNearestFood(Id startID, Graph graphIn){
@@ -328,7 +328,7 @@ public class Path {
 	}
 	/**
 	 * 
-	 * @param StartID the location to find the nearest mens room to.
+	 * @param startID the location to find the nearest mens room to.
 	 * @return the nearest mens room by linear distance
 	 */
 	public Id findNearestMensRoom(Id startID, Graph graphIn){
@@ -350,7 +350,7 @@ public class Path {
 	}
 	/**
 	 * 
-	 * @param StartID the location to find the nearest womens room to.
+	 * @param startID the location to find the nearest womens room to.
 	 * @return the nearest womens room by linear distance
 	 */
 	public Id findNearestWomensRoom(Id startID, Graph graphIn){
@@ -372,7 +372,7 @@ public class Path {
 	}
 	/**
 	 * 
-	 * @param StartID the location to find the nearest gender neutral restroom to.
+	 * @param startID the location to find the nearest gender neutral restroom to.
 	 * @return the nearest gender neutral restroom by linear distance
 	 */
 	public Id findNearestGenderNeutralRestroom(Id startID, Graph graphIn){
@@ -481,6 +481,7 @@ public class Path {
 
 		if(route == null || route.isEmpty()) return null;
 		for(int currentNode = 0; currentNode < route.size(); currentNode++){
+			Step step = new Step(theGraph.returnNodeById(route.get(currentNode)), theGraph.returnNodeById(route.get(currentNode + 1)));
 
 		}
 		return directions;

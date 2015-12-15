@@ -11,10 +11,10 @@ public class Step {
     private String instruction;
     //endregion
 
-    public Step(Node starNode, Node endNode, String instruction){
+    public Step(Node starNode, Node endNode){
         this.starNode = starNode;
         this.endNode = endNode;
-        this.instruction = instruction;
+        this.instruction = "";
     }
 
     @Override
