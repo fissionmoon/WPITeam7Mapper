@@ -1,6 +1,7 @@
 package edu.wpi.off.by.one.errors.code.controller;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -113,7 +114,7 @@ public class MapRootPane extends AnchorPane{
 
     
     public MapRootPane() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/MapRootPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/wpi/off/by/one/errors/code/view/MapRootPane.fxml"));
         
         loader.setRoot(this);
         loader.setController(this);
@@ -146,7 +147,13 @@ public class MapRootPane extends AnchorPane{
     
     private void initialize(){
     	//Load campus map from display list
-		display = FileIO.load("src" + resourceDir + "maps/txtfiles/fullCampusMap.txt", display);
+    	
+		try {
+			display = FileIO.load(getClass().getResourceAsStream("/edu/wpi/off/by/one/errors/code/resources/maps/txtfiles/fullCampusMap.txt"), display);
+		} catch (URISyntaxException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		// Put all these sets into fxml
         pathPane.setMouseTransparent(true);
         markerPane.setMouseTransparent(false);
@@ -327,7 +334,6 @@ public class MapRootPane extends AnchorPane{
 					if(icon != null) {
 						Rotate r = new Rotate(0, 0, 0);
 						mygc.setTransform(r.getMxx(), r.getMyx(), r.getMxy(), r.getMyy(), r.getTx() + c.getX(), r.getTy() + c.getY());
-						System.out.println("Zoom: " + zoom);
 //						if(zoom > max) mygc.scale(max/2, max/2);
 //						else if(zoom < min) mygc.scale(min/2, min/2);
 //						else mygc.scale((zoom/2), (zoom/2));
@@ -629,6 +635,16 @@ public class MapRootPane extends AnchorPane{
 					m.setRotation(m.getRotation() + deltaRot);
 					m.setScale(m.getScale() + deltaZoom);
 					m.getCenter().setAll((float) c.getX() + delta.getX(), (float)c.getY() + delta.getY(), c.getZ());
+					//find all connected maps
+					if(m.mapstackname != null){
+						Mapstack ms = display.addmapstack(m.mapstackname);
+						for(int i : ms.meps){
+							if(i > display.getMaps().size()) continue;
+							Map j = display.getMaps().get(i);
+							if(j == null) continue;
+							j.getCenter().setAll((float) c.getX() + delta.getX(), (float)c.getY() + delta.getY(), j.getCenter().getZ());
+						}
+					}
 					render();
 				}
 				lastdragged.setAll(in.getX(), in.getY(), 0);
