@@ -91,3 +91,7 @@
     -fx-background-image: url("/edu/wpi/off/by/one/errors/code/resources/icons/red/QuestionRed.png");
     -fx-background-size: cover;
 }
+
+#helpMenuPane{
+    -fx-background-color:White;
+}
