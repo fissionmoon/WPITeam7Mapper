@@ -560,7 +560,7 @@ public class MapRootPane extends AnchorPane{
 		Coordinate nc = n.getCoordinate();
 		startMarker = new MarkerDisplay(nc.getX(), nc.getY(), nc.getZ(), Marker.START);
 		startMarker.setNodePoint(n.getId());
-		System.out.println("start set");
+		//System.out.println("start set");
 		//nodeQueue.clear();
 		//nodeQueue.add(e)
 		markerPane.getChildren().add(startMarker);
@@ -656,7 +656,7 @@ public class MapRootPane extends AnchorPane{
 					m.getCenter().setAll((float) c.getX() + delta.getX(), (float)c.getY() + delta.getY(), c.getZ());
 					//find all connected maps
 					if(m.mapstackname != null) {
-						System.out.println("mapsteck " + m.mapstackname);
+						//System.out.println("mapsteck " + m.mapstackname);
 						Mapstack ms = display.addmapstack(m.mapstackname);
 						for (int ki : ms.meps) {
 							if (ki > display.getMaps().size()) continue;
