@@ -44,7 +44,7 @@ public class Display extends Pane{
 			if(m.mapstackname == null) continue;
 			int col = m.getColor(n.getCoordinate());
 			if(col != 0){
-				System.out.println(col + " " + m.getName());
+				//System.out.println(col + " " + m.getName());
 				Mapstack ms = mapstecks.get(m.mapstackname);
 				if(ms != null) {
 					if(n.mapstackname != null){
@@ -68,7 +68,7 @@ public class Display extends Pane{
 				if(m.mapstackname == null) continue;
 				int col = m.getColor(n.getCoordinate());
 				if(col != 0){
-					System.out.println(col + " " + m.getName());
+					//System.out.println(col + " " + m.getName());
 					Mapstack ms = mapstecks.get(m.mapstackname);
 					if(ms != null) {
 						if(n.mapstackname != null){
@@ -110,10 +110,10 @@ public class Display extends Pane{
 			//found it
 			ms.addm(i);
 			Map m = Maps.get(i);
-			System.out.println("addmap "+ m.getName() + " " +sname);
+			//System.out.println("addmap "+ m.getName() + " " +sname);
 			m.setmapstack(sname);
 		} else {
-			System.out.println("unable to find map " + mname);
+			//System.out.println("unable to find map " + mname);
 		}
 	}
 	

@@ -3,6 +3,7 @@ package edu.wpi.off.by.one.errors.code.controller.menupanes;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import edu.wpi.off.by.one.errors.code.controller.ControllerSingleton;
 import edu.wpi.off.by.one.errors.code.controller.MainPane;
@@ -54,7 +55,10 @@ public class SearchMenuPane extends BorderPane {
         }
         this.getStylesheets().add(getClass().getResource("/edu/wpi/off/by/one/errors/code/resources/stylesheets/menupanes/SearchPaneStyleSheet.css").toExternalForm());
         setListeners();
-		searchField.setTagsSet(TagMap.getTagMap().getTags());
+        
+        Set<String> tagNameSet = TagMap.getTagMap().getTags();
+        tagNameSet.addAll(TagMap.getTagMap().getNames());
+		searchField.setTagsSet(tagNameSet);
         //SortedSet<String> entries = new TreeSet<String>();
         /*
         for(Map m : ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps()){

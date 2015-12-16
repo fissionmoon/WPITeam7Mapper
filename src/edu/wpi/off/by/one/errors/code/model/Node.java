@@ -60,9 +60,10 @@ public class Node {
         this.coord = newCoord;
     }
     
-    public void setName(String name){
-    	this.name = name;
-    	TagMap.getTagMap().addName(name, id);
+    public void setName(String nameIn){
+    	nameIn = nameIn.trim();
+    	this.name = nameIn;
+    	TagMap.getTagMap().addName(nameIn, id);
     }
     
     public String getName(){
