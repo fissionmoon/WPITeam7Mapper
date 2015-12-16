@@ -47,6 +47,7 @@ public class SettingsMenuPane extends BorderPane {
     @FXML private ClearableTextField emailTextField;
     @FXML CheckBox pirateCheckbox;
     @FXML protected ComboBox carrierChoiceBox;
+    @FXML protected ComboBox unitChoiceBox;
     //endregion
 
     //region Other attributes
@@ -78,6 +79,7 @@ public class SettingsMenuPane extends BorderPane {
         loadUserSettings();
         ControllerSingleton.getInstance().registerSettingsMenuPane(this);
         populateCarrierChoiceBox();
+        populateUnitChoiceBox();
     }
     //endregion
 
@@ -115,6 +117,10 @@ public class SettingsMenuPane extends BorderPane {
     	carrierChoiceBox.getItems().addAll("Alltel Wireless", "AT&T Wireless", "AT&T Mobility",
     			"Boost Mobile", "Cricket", "Metro PCS", "Sprint PCS", "Sprint Nextel", "Straight Talk",
     			"T-Mobile", "U.S. Cellular", "Verizon", "Virgin Mobile");
+    }
+    
+    private void populateUnitChoiceBox(){
+    	unitChoiceBox.getItems().addAll("Meters", "Feet");
     }
 
     private void loadUserSettings(){
@@ -197,5 +203,14 @@ public class SettingsMenuPane extends BorderPane {
     		isValid = false;
     	}
     	return isValid;
+    }
+    
+    public boolean isMeter(){
+    	String unit = (String) unitChoiceBox.getValue();
+    	if (unit == "Meters"){
+    		return true;
+    	}else{
+    		return false;
+    	}
     }
 }
