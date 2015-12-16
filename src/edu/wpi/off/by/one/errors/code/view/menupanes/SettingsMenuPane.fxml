@@ -34,8 +34,12 @@
                 </GridPane>
                 <Label text="Email" />
                 <ClearableTextField fx:id="emailTextField" promptText="email@wpi.edu" />
-                <Label text="Units" />
-                <ChoiceBox />
+               <Label text="Units" />
+               	<ComboBox fx:id="unitChoiceBox" prefHeight="25.0" prefWidth="250.0" >
+              <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ComboBox>
                 <Label text="History" />
                 <CheckBox text="Remember Searches" />
                 <Button alignment="TOP_LEFT" text="Clear History" />
