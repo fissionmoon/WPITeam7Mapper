@@ -144,7 +144,7 @@ public class NavigationPane extends GridPane{
      * Listener for previous Button
      * Shows the previous instruction
      */
-    private void nodezoomcheck(boolean direction){
+    public void nodezoomcheck(boolean direction){
 
         Node st = directionsList.get(currentInstructionIndex).getStart();
         Node et = directionsList.get(currentInstructionIndex).getEnd();
