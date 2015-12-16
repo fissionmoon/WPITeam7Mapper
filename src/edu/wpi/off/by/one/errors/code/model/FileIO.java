@@ -123,8 +123,8 @@ public class FileIO {
 	 * @return id of the node; -1 if wrong input
 	 */
 	static Id parsepointline(String[] args, Graph g) {
-		if (args.length > 5)
-			return null;
+//		if (args.length > 5)
+//			return null;
 		Coordinate c = new Coordinate(Float.parseFloat(args[0]), Float.parseFloat(args[1]), Float.parseFloat(args[2]));
 		Node n = g.addNode(c);
 		if(args.length >= 4) {
@@ -168,9 +168,15 @@ public class FileIO {
 			return null;
 		Id id1 = nodeids.get(indice1);
 		Id id2 = nodeids.get(indice2);
-		Edge e = g.addEdge(id1, id2);
+		Edge e = null;
+		//if(id1 != null && id2 != null) {
+			e = g.addEdge(id1, id2);
+			return e.getId();
+		//}else{
+		//	return null;
+		//} 
+			
 		//if(args.length >= 3) for(String j : getTags(args[2])) e.addTag(j);
-		return e.getId();
 	}
 
 	/**
