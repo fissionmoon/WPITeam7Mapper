@@ -46,7 +46,7 @@
                 </BorderPane>
             </center>
         </BorderPane>
-        <StackPane fx:id="smsEmailContainer" visible="false" alignment="CENTER" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <StackPane fx:id="smsEmailContainer" visible="false" alignment="CENTER" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" onMouseClicked="#onsmsEmailContainerMouseClick">
             <EmailPane fx:id="emailPane" maxHeight="700" maxWidth="900"/>
             <SMSPane fx:id="smsPane" maxHeight="700" maxWidth="900"/>
         </StackPane>

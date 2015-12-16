@@ -234,5 +234,9 @@ public class MainPane extends StackPane {
 		emailPane.setVisible(visible);
 		smsPane.setVisible(!visible);
 	}
+
+	@FXML private void onsmsEmailContainerMouseClick(){
+		smsEmailContainer.setVisible(false);
+	}
 }
 
