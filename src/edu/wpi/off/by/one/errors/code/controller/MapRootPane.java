@@ -762,7 +762,11 @@ public class MapRootPane extends AnchorPane{
     				endMarker = new MarkerDisplay(nearestNode.getCoordinate().getX(), nearestNode.getCoordinate().getY(), level, Marker.END);
     				endMarker.setNodePoint(nearestNodeId);
     				drawPath(startMarker.getNodePoint(), endMarker.getNodePoint());
-    				showDirections();showDirections();
+    				ControllerSingleton.getInstance().getNavigationPane().start(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps());
+    				for(int i = 0; i < ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().size(); i++){
+    					System.out.println(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().get(i).toString());
+    				}
+    				showDirections();
     				//markerPane.getChildren().add(endMarker);
     			}
     			if(startMarker == null && nodeQueue.size() == 0) {
