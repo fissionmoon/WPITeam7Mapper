@@ -39,6 +39,7 @@ public class FileIO {
 	static ArrayList<String[]> edgebuf;
 	static ArrayList<String[]> mapbuf;
 	static ArrayList<String[]> steckbuf;
+	private Display curdpy;
 
 	/**
 	 * flush node and edge's buffer
@@ -76,7 +77,7 @@ public class FileIO {
 	 * @return 1 if success
 	 */
 	static int parsemapline(String[] args, Display dpy){
-		//for(String s : args) System.out.println("arg:" + s);
+		//for(String s : args) .println("arg:" + s);
 		Coordinate c = new Coordinate(Float.parseFloat(args[1]), Float.parseFloat(args[2]), Float.parseFloat(args[3]));
 		Map m = new Map(args[0], c, Float.parseFloat(args[4]), Float.parseFloat(args[5]));
 		if(args.length > 6) m.setName(getTags(args[6])[0]);
@@ -84,7 +85,7 @@ public class FileIO {
 		return 1;
 	}
 	static int parsesteckline(String[] args, Display dpy){
-		for(String s : args) System.out.println("arg:" + s);
+		//for(String s : args) System.out.println("arg:" + s);
 		if(args.length < 2) return 0;
 		if(args[0] == null) return 0;
 		dpy.addmapstack(args[0]);
@@ -122,8 +123,8 @@ public class FileIO {
 	 * @return id of the node; -1 if wrong input
 	 */
 	static Id parsepointline(String[] args, Graph g) {
-		if (args.length > 5)
-			return null;
+//		if (args.length > 5)
+//			return null;
 		Coordinate c = new Coordinate(Float.parseFloat(args[0]), Float.parseFloat(args[1]), Float.parseFloat(args[2]));
 		Node n = g.addNode(c);
 		if(args.length >= 4) {
@@ -145,6 +146,9 @@ public class FileIO {
 			if(flags.contains("w"))n.setWomens(true);
 			if(flags.contains("s"))n.setStairs(true);
 		}
+		if(args.length >=6){
+			String stackname = args[5];
+		}
 		return n.getId();
 	}
 
@@ -164,9 +168,15 @@ public class FileIO {
 			return null;
 		Id id1 = nodeids.get(indice1);
 		Id id2 = nodeids.get(indice2);
-		Edge e = g.addEdge(id1, id2);
+		Edge e = null;
+		//if(id1 != null && id2 != null) {
+			e = g.addEdge(id1, id2);
+			return e.getId();
+		//}else{
+		//	return null;
+		//} 
+			
 		//if(args.length >= 3) for(String j : getTags(args[2])) e.addTag(j);
-		return e.getId();
 	}
 
 	/**
@@ -263,6 +273,7 @@ public class FileIO {
 		edgebuf = null;
 		nodebuf = null; // best i can do to "free" it
 		mapbuf = null;
+		curdpy.autoaffiliate();
 		return curdpy;
 	}
 
@@ -273,6 +284,7 @@ public class FileIO {
 	 * @return -1 if fail; otherwise, success
 	 */
 	public static int save(String inpath, Display indpy) {
+	//	indpy.autoaffiliate();
 		// todo fix this try catch BS
 		PrintWriter writer = null;
 		try {
@@ -311,6 +323,10 @@ public class FileIO {
 			if(n.isMens()) writer.printf("m");
 			if(n.isWomens()) writer.printf("w");
 			if(n.isStairs()) writer.printf("s");
+			writer.printf("_ ");
+			if(n.mapstackname != null){
+				writer.printf("%s ", n.mapstackname);
+			}
 			writer.printf("\n");
 			i++;
 		}

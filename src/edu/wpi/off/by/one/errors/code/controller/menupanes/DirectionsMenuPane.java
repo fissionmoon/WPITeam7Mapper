@@ -33,17 +33,11 @@ import javafx.scene.layout.BorderPane;
  * Created by jules on 11/28/2015.
  */
 public class DirectionsMenuPane extends BorderPane {
-	@FXML private AutoCompleteNameTextField originTextField;
-    @FXML private AutoCompleteNameTextField destinationTextField;
+	@FXML private ClearableTextField originTextField;
+    @FXML private ClearableTextField destinationTextField;
 	@FXML Button routeButton;
-	@FXML Button foodButton;
-	@FXML Button mensRoomButton;
-	@FXML Button womensRoomButton;
-	@FXML Button genderNeutralRestroomButton;
     @FXML private ListView<String> directionsListView;
     @FXML CheckBox accessibleCheckbox;
-    @FXML Button emailButton;
-    @FXML Button smsButton;
     @FXML ComboBox carrierChoiceBox;
 
     private SettingsMenuPane settingsMenuPane;
@@ -57,12 +51,15 @@ public class DirectionsMenuPane extends BorderPane {
         loader.setController(this);
         try{
             loader.load();
+			this.getStylesheets().add(getClass().getResource("/edu/wpi/off/by/one/errors/code/resources/stylesheets/menupanes/DirectionsPaneStyleSheet.css").toExternalForm());
             setListeners();
         }catch(IOException excpt){
             throw new RuntimeException(excpt);
         }
         settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
-        this.getStylesheets().add(getClass().getResource("/edu/wpi/off/by/one/errors/code/resources/stylesheets/menupanes/DirectionsPaneStyleSheet.css").toExternalForm());
+		originTextField.setTagsSet(TagMap.getTagMap().getNames());
+		destinationTextField.setTagsSet(TagMap.getTagMap().getNames());
+
     }
 
 	private void setListeners(){ 
@@ -71,22 +68,10 @@ public class DirectionsMenuPane extends BorderPane {
 			setDirectionsToNode();
 			ControllerSingleton.getInstance().getMapRootPane().placeStartMarker(originNode);
 			ControllerSingleton.getInstance().getMapRootPane().drawPath(originNode.getId(), destinationNode.getId());
-		});
-		this.foodButton.setOnAction(e-> {
-			//ControllerSingleton.getInstance().getMapRootPane().placeMarker(originNode);
-			ControllerSingleton.getInstance().getMapRootPane().drawFoodPath();
-		});
-		this.mensRoomButton.setOnAction(e-> {
-			//ControllerSingleton.getInstance().getMapRootPane().placeMarker(originNode);
-			ControllerSingleton.getInstance().getMapRootPane().drawMensRoomPath();
-		});
-		this.womensRoomButton.setOnAction(e-> {
-			//ControllerSingleton.getInstance().getMapRootPane().placeMarker(originNode);
-			ControllerSingleton.getInstance().getMapRootPane().drawWomensRoomPath();
-		});
-		this.genderNeutralRestroomButton.setOnAction(e-> {
-			//ControllerSingleton.getInstance().getMapRootPane().placeMarker(originNode);
-			ControllerSingleton.getInstance().getMapRootPane().drawGenderNeutralRestroomPath();
+			ControllerSingleton.getInstance().getNavigationPane().start(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps());
+			for(int i = 0; i < ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().size(); i++){
+				System.out.println(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().get(i).toString());
+			}
 		});
 	}
 	
@@ -136,24 +121,10 @@ public class DirectionsMenuPane extends BorderPane {
         originNode = destinationNode;
         destinationNode = buffer;
     }
-
-    public void saveAsPng() {
-    	MapRootPane mrp = new MapRootPane();
-        WritableImage image = mrp.snapshot(new SnapshotParameters(), null);
-
-        // TODO: probably use a file chooser here
-        File file = new File("screenshot.png");
-
-        try {
-            ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
-            System.out.println("shoted");
-        } catch (IOException e) {
-            // TODO: handle exception here
-        }
-    }
     
     @FXML private void onEmailButtonClick(){
-        settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
+		ControllerSingleton.getInstance().getMainPane().showEmailPane(true);
+        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
         String userEmail = settingsMenuPane.getUserEmail();
         List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
         String userName = settingsMenuPane.getUserName();
@@ -161,20 +132,14 @@ public class DirectionsMenuPane extends BorderPane {
         for (String s : directions){
             body += (s + "\n");
         }
-        saveAsPng();
         GoogleMail googleMail = new GoogleMail();
-        googleMail.send(userEmail, "Directions from goatThere()", body);
-    }
-    public void disableEmailButton(boolean b){
-        emailButton.setDisable(b);
-    }
-    public void disableSMSButton(boolean b){
-    	smsButton.setDisable(b);
+        googleMail.send(userEmail, "Directions from goatThere()", body);*/
     }
     
     @FXML private void onSMSButtonClick(){
+		ControllerSingleton.getInstance().getMainPane().showSMSPane(true);
 
-        settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
+        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
         String userName = settingsMenuPane.getUserName();
 
         List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
@@ -190,20 +155,7 @@ public class DirectionsMenuPane extends BorderPane {
         String output = "";
         int count = 0;
 
-        for (int i=0; i< numMessage; i++){   
-	        body.getChars(count, count+300, message, 0);
-	        output = new String(message);
-	        sendMessage(output);
-	        count = count + 300;
-        }
-
-        if (body.length() % 300 != 0){
-	        body.getChars(count, body.length(), message, 0);
-	        output = new String(message);
-	        sendMessage(output);
-        }      
-
-        //cannot place starting point on 4th level        
+        sendMessage(body);*/
 
     }
 
@@ -218,7 +170,6 @@ public class DirectionsMenuPane extends BorderPane {
     	String carrier =settingsMenuPane.getCarrier();
     	
     	String user;
-    	System.out.println(carrier);
     	switch(carrier){
     		case "AT&T Wireless":
     			user = userNumber + "@txt.att.net";
@@ -264,8 +215,6 @@ public class DirectionsMenuPane extends BorderPane {
     			break;
     			
     	}
-
-    	System.out.println(user);
         googleMail.send(user, "Directions from goatThere()", body);
 
 

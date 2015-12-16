@@ -3,6 +3,7 @@ package edu.wpi.off.by.one.errors.code.controller.menupanes;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import edu.wpi.off.by.one.errors.code.controller.ControllerSingleton;
 import edu.wpi.off.by.one.errors.code.controller.MainPane;
@@ -31,7 +32,7 @@ import javafx.scene.layout.BorderPane;
  */
 public class SearchMenuPane extends BorderPane {
 
-	@FXML AutoCompleteTextField searchField;
+	@FXML ClearableTextField searchField;
 	@FXML Button toButton;
 	@FXML Button fromButton;
 	@FXML Button searchLocationButton;
@@ -54,6 +55,10 @@ public class SearchMenuPane extends BorderPane {
         }
         this.getStylesheets().add(getClass().getResource("/edu/wpi/off/by/one/errors/code/resources/stylesheets/menupanes/SearchPaneStyleSheet.css").toExternalForm());
         setListeners();
+        
+        Set<String> tagNameSet = TagMap.getTagMap().getTags();
+        tagNameSet.addAll(TagMap.getTagMap().getNames());
+		searchField.setTagsSet(tagNameSet);
         //SortedSet<String> entries = new TreeSet<String>();
         /*
         for(Map m : ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps()){
@@ -68,6 +73,7 @@ public class SearchMenuPane extends BorderPane {
 			String name = (m.getName() == null) ? m.getImgUrl() : m.getName();
 			buildingChoiceBox.getItems().add(name);
         }
+		buildingChoiceBox.setValue("Campus Map");
 	}
 	
 	@FXML private void setDirectionsTo(){
