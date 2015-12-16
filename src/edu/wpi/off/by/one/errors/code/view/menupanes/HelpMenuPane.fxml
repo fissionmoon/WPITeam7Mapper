@@ -11,7 +11,7 @@
          <children>
             <ImageView style=" -fx-border-color:black;" fitWidth="250" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="@../../resources/userguide.png" />
+                  <Image url="@edu/wpi/off/by/one/errors/code/resources/userguide.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
