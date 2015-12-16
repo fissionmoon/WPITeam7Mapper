@@ -1836,9 +1836,9 @@ p 666.246582 1087.508301 1.000000 _ a_ Harrington_Gym
 p 660.615051 1086.616333 1.000000 _ a_ Harrington_Gym 
 p 660.488647 1083.687866 1.000000 _ a_ Harrington_Gym 
 p 647.311951 1080.699463 1.000000 _ a_ Harrington_Gym 
-p 649.984680 1054.561401 1.000000 Harrington_Auditorium_209,Harrington_Auditorium_209,Harrington_209,209_Harrington_Auditorium,209_Harrington a_ Harrington_Gym 
+p 649.984680 1054.561401 1.000000 Harrington_Auditorium_209,Harrington_209,209_Harrington_Auditorium,209_Harrington a_ Harrington_Gym 
 p 652.923950 1042.827393 1.000000 _ a_ Harrington_Gym 
-p 649.783386 1042.329956 1.000000 Harrington_Auditorium_210,Harrington_Auditorium_210,Harrington_210,210_Harrington_Auditorium,210_Harrington a_ Harrington_Gym 
+p 649.783386 1042.329956 1.000000 Harrington_Auditorium_210,Harrington_210,210_Harrington_Auditorium,210_Harrington a_ Harrington_Gym 
 p 654.605164 1034.387695 1.000000 _ a_ Harrington_Gym 
 p 651.361511 1033.179443 1.000000 Harrington_Auditorium_211,Harrington_211,211_Harrington_Auditorium,211_Harrington a_ Harrington_Gym 
 p 654.097778 1051.043701 1.000000 Harrington_Auditorium_209A,Harrington_209A,209A_Harrington_Auditorium,209A_Harrington a_ Harrington_Gym 
@@ -1862,7 +1862,7 @@ p 723.750977 1093.415894 1.000000 Harrington_Auditorium_201B a_ Harrington_Gym
 p 731.723022 1070.646240 1.000000 Harrington_Auditorium_219X a_ Harrington_Gym 
 p 652.009033 1098.513184 1.000000 _ a_ 
 p 668.939636 1031.252563 1.000000 _ a_ Harrington_Gym 
-p 715.931519 1104.044067 1.000000 _ as_ Harrington_Gym 
+p 715.931519 1104.044067 1.000000 _ s_ Harrington_Gym 
 p 713.401672 1106.608032 2.000000 Harrington_Auditorium_316 a_ Harrington_Gym 
 p 712.627869 1103.420044 2.000000 _ as_ Harrington_Gym 
 p 712.028320 1106.285767 2.000000 _ a_ Harrington_Gym 
@@ -1929,10 +1929,10 @@ p 950.337219 1237.545532 1.000000 _ a_ Boynton_Hall
 p 948.836914 1237.485474 1.000000 _ a_ Boynton_Hall 
 p 948.274292 1241.037720 1.000000 _ a_ Boynton_Hall 
 p 950.872375 1234.166504 1.000000 _ a_ Boynton_Hall 
-p 956.436523 1233.605469 1.000000 Boynton_Hall_110,Boynton_Hall_110,Boynton_110,110__Boynton_Hall,110__Boynton a_ Boynton_Hall 
+p 956.436523 1233.605469 1.000000 Boynton_Hall_110,Boynton_110,110__Boynton_Hall,110__Boynton a_ Boynton_Hall 
 p 957.031311 1228.925171 1.000000 _ a_ Boynton_Hall 
 p 962.052063 1229.187500 1.000000 _ a_ Boynton_Hall 
-p 957.348572 1223.557861 1.000000 Boynton_Hall_118,Boynton_Hall_118,Boynton_118,118__Boynton_Hall,118__Boynton a_ Boynton_Hall 
+p 957.348572 1223.557861 1.000000 Boynton_Hall_118,Boynton_118,118__Boynton_Hall,118__Boynton a_ Boynton_Hall 
 p 954.503174 1223.018311 1.000000 _ a_ Boynton_Hall 
 p 949.639526 1227.932007 1.000000 _ a_ Boynton_Hall 
 p 953.624939 1228.563232 1.000000 _ a_ Boynton_Hall 
@@ -2025,6 +2025,80 @@ p 663.657410 1057.340576 -1.000000 _ a_ Harrington_Gym
 p 662.340759 1068.897827 -1.000000 _ a_ Harrington_Gym 
 p 663.949951 1053.098145 -1.000000 _ a_ Harrington_Gym 
 p 664.973999 1049.001831 -1.000000 _ a_ Harrington_Gym 
+p 676.257141 1066.857300 -1.000000 _ a_ 
+p 694.220886 1071.679199 -1.000000 _ a_ 
+p 721.089783 1077.291138 -1.000000 _ a_ Harrington_Gym 
+p 707.823364 1079.506226 -1.000000 _ a_ 
+p 696.889343 1088.634277 -1.000000 _ a_ 
+p 695.612488 1096.543823 -1.000000 _ a_ 
+p 655.621582 1055.428101 -1.000000 _ a_ 
+p 656.383911 1049.108521 -1.000000 _ a_ 
+p 654.553162 1059.360352 -1.000000 _ a_ 
+p 646.574707 1053.229370 -1.000000 _ a_ Harrington_Gym 
+p 643.018860 1065.546631 -1.000000 _ a_ 
+p 643.764771 1061.597534 -1.000000 _ a_ 
+p 651.023682 1062.947998 -1.000000 _ a_ 
+p 649.090576 1071.038696 -1.000000 _ a_ 
+p 643.342224 1069.659546 -1.000000 _ a_ 
+p 643.253601 1052.839722 -1.000000 _ a_ 
+p 643.880798 1049.099976 -1.000000 _ a_ 
+p 640.940369 1055.844482 -1.000000 _ a_ 
+p 638.678284 1059.929688 -1.000000 _ a_ 
+p 640.996216 1052.721436 -1.000000 _ a_ 
+p 640.842773 1049.479736 -1.000000 _ a_ 
+p 641.175171 1043.137573 -1.000000 _ a_ 
+p 659.819763 1082.272339 -1.000000 _ a_ 
+p 662.915161 1060.229858 -1.000000 _ a_ 
+p 677.048096 1062.048462 -1.000000 _ a_ 
+p 689.404785 1064.851807 -1.000000 _ a_ 
+p 690.445007 1061.457031 -1.000000 _ a_ 
+p 695.429199 1060.963745 -1.000000 _ a_ 
+p 695.948853 1057.218384 -1.000000 _ a_ Harrington_Gym 
+p 693.504639 1056.551270 -1.000000 _ a_ Harrington_Gym 
+p 693.118835 1051.572754 -1.000000 _ a_ 
+p 688.524719 1050.792969 -1.000000 _ a_ 
+p 690.392944 1056.280396 -1.000000 _ a_ 
+p 679.711060 1054.427124 -1.000000 _ a_ 
+p 671.615234 1054.649536 -1.000000 _ a_ 
+p 672.371948 1048.437500 -1.000000 _ a_ 
+p 676.524780 1049.409668 -1.000000 _ a_ 
+p 682.533203 1049.940063 -1.000000 _ a_ 
+p 697.914856 1044.386597 -1.000000 _ a_ 
+p 685.354919 1043.405029 -1.000000 _ a_ 
+p 698.411987 1041.071167 -1.000000 _ a_ Harrington_Gym 
+p 686.134644 1038.810913 -1.000000 _ a_ 
+p 686.948120 1033.571899 -1.000000 _ a_ 
+p 674.311584 1044.335327 -1.000000 _ a_ Harrington_Gym 
+p 678.379517 1044.871826 -1.000000 _ a_ 
+p 674.779663 1037.461304 -1.000000 _ a_ 
+p 679.611267 1037.822266 -1.000000 _ a_ 
+p 680.192871 1032.894409 -1.000000 _ a_ 
+p 699.050232 1061.800293 -1.000000 _ a_ Harrington_Gym 
+p 708.690918 1062.952271 -1.000000 _ a_ Harrington_Gym 
+p 701.362610 1054.699585 -1.000000 _ a_ Harrington_Gym 
+p 709.538269 1057.068237 -1.000000 _ a_ 
+p 708.572327 1038.477783 -1.000000 _ a_ 
+p 718.665527 1039.222290 -1.000000 _ a_ 
+p 721.037415 1045.382813 -1.000000 _ a_ 
+p 717.727600 1044.778198 -1.000000 _ a_ 
+p 717.220154 1052.404663 -1.000000 _ a_ Harrington_Gym 
+p 731.984924 1046.279907 -1.000000 _ a_ 
+p 714.156250 1063.562012 -1.000000 _ a_ 
+p 726.578247 1054.835449 -1.000000 _ a_ Harrington_Gym 
+p 725.121155 1066.184692 -1.000000 _ a_ 
+p 722.552551 1065.834473 -1.000000 _ a_ 
+p 729.500244 1066.953125 -1.000000 _ a_ Harrington_Gym 
+p 730.267761 1058.478027 -1.000000 _ a_ 
+p 731.391602 1049.374756 -1.000000 _ a_ 
+p 741.552856 1050.877441 -1.000000 _ a_ 
+p 738.810974 1060.003540 -1.000000 _ a_ Harrington_Gym 
+p 733.471863 1067.269043 -1.000000 _ a_ 
+p 732.499695 1071.421875 -1.000000 _ a_ 
+p 728.318726 1070.987183 -1.000000 _ a_ 
+p 727.437561 1077.516235 -1.000000 _ a_ 
+p 736.453552 1067.964233 -1.000000 _ a_ 
+p 735.713318 1071.805908 -1.000000 _ a_ 
+p 742.111328 1069.015259 -1.000000 _ a_ 
 e 17 22
 e 22 21
 e 21 86
@@ -4209,17 +4283,17 @@ m Wash0.png 974.23615 1101.8984 0.0 9.0 0.12 Washburn_Labs_Basement
 m Wash1.png 974.23615 1101.8984 1.0 9.0 0.12 Washburn_Labs_1
 m Wash2.png 974.23615 1101.8984 2.0 9.0 0.12 Washburn_Labs_2
 m Wash3.png 974.23615 1101.8984 3.0 9.0 0.12 Washburn_Labs_3
-s Bartlett_Center Bartlett_Center_1 Bartlett_Center_2 
-s Gordon_Library Gordon_Library_Subfloor Gordon_Library_0 Gordon_Library_1 Gordon_Library_2 Gordon_Library_3 
-s Higgins_House Higgins_House_0 Higgins_House_1 Higgins_House_2 Higgins_House_3 
-s Campus_Center Campus_Center_1 Campus_Center_2 Campus_Center_3 
-s Boynton_Hall Boynton_Hall_Basement Boynton_Hall_1 Boynton_Hall_2 Boynton_Hall_3 
-s Higgins_Labs Higgins_Labs_Basement Higgins_Labs_1 Higgins_Labs_2 Higgins_Labs_3 
-s Salisbury_Labs Salisbury_Labs_Basement Salisbury_Labs_1 Salisbury_Labs_2 Salisbury_Labs_3 Salisbury_Labs_4 
-s Washburn_Labs Washburn_Labs_Basement Washburn_Labs_1 Washburn_Labs_2 Washburn_Labs_3 
-s Atwater_Kent Atwater_Kent_0 Atwater_Kent_1 Atwater_Kent_2 Atwater_Kent_3 
-s Harrington_Gym Harrington_Basement Harrington_Gymnasium Harrington_Entrance_Level Harrington_Upper_Stands_and_Balcony 
-s Alden_Hall Alden_Hall_00 Alden_Hall_0 Alden_Hall_1 Alden_Hall_2 
-s Fuller_Labs Fuller_Labs_Subbasement Fuller_Labs_Basement Fuller_Labs_1 Fuller_Labs_2 Fuller_Labs_3 
-s Project_Center Project_Center_1 Project_Center_2 
-s Stratton_Hall Stratton_Hall_0 Stratton_Hall_1 Stratton_Hall_2 
+s Bartlett_Center Bartlett Center 1 Bartlett Center 2 
+s Gordon_Library Gordon Library Subfloor Gordon Library 0 Gordon Library 1 Gordon Library 2 Gordon Library 3 
+s Higgins_House Higgins House 0 Higgins House 1 Higgins House 2 Higgins House 3 
+s Campus_Center Campus Center 1 Campus Center 2 Campus Center 3 
+s Boynton_Hall Boynton Hall Basement Boynton Hall 1 Boynton Hall 2 Boynton Hall 3 
+s Higgins_Labs Higgins Labs Basement Higgins Labs 1 Higgins Labs 2 Higgins Labs 3 
+s Salisbury_Labs Salisbury Labs Basement Salisbury Labs 1 Salisbury Labs 2 Salisbury Labs 3 Salisbury Labs 4 
+s Washburn_Labs Washburn Labs Basement Washburn Labs 1 Washburn Labs 2 Washburn Labs 3 
+s Atwater_Kent Atwater Kent 0 Atwater Kent 1 Atwater Kent 2 Atwater Kent 3 
+s Harrington_Gym Harrington Basement Harrington Gymnasium Harrington Entrance Level Harrington Upper Stands and Balcony 
+s Alden_Hall Alden Hall 00 Alden Hall 0 Alden Hall 1 Alden Hall 2 
+s Fuller_Labs Fuller Labs Subbasement Fuller Labs Basement Fuller Labs 1 Fuller Labs 2 Fuller Labs 3 
+s Project_Center Project Center 1 Project Center 2 
+s Stratton_Hall Stratton Hall 0 Stratton Hall 1 Stratton Hall 2 

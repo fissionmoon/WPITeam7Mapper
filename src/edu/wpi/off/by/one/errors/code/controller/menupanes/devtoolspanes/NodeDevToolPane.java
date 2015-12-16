@@ -166,6 +166,7 @@ public class NodeDevToolPane extends VBox {
     @FXML private void toggleIsAccessible() {
     	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
     	n.setAccessible(accessibleCheckbox.isSelected() ? true : false);
+    	System.out.println(n.isAccessible());
     }
     @FXML private void toggleIsStairs() {
     	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
