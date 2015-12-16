@@ -42,7 +42,7 @@ public class SearchMenuPane extends BorderPane {
 	int currentLevel;
 	
     public SearchMenuPane(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../view/menupanes/SearchMenuPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/wpi/off/by/one/errors/code/view/menupanes/SearchMenuPane.fxml"));
 
         loader.setRoot(this);
         loader.setController(this);
@@ -52,7 +52,7 @@ public class SearchMenuPane extends BorderPane {
         }catch(IOException excpt){
             throw new RuntimeException(excpt);
         }
-        this.getStylesheets().add(getClass().getResource("../../resources/stylesheets/menupanes/SearchPaneStyleSheet.css").toExternalForm());
+        this.getStylesheets().add(getClass().getResource("/edu/wpi/off/by/one/errors/code/resources/stylesheets/menupanes/SearchPaneStyleSheet.css").toExternalForm());
         setListeners();
         //SortedSet<String> entries = new TreeSet<String>();
         /*
@@ -65,8 +65,8 @@ public class SearchMenuPane extends BorderPane {
 	public void updateMapList(ArrayList<Map> maps){
 		buildingChoiceBox.getItems().clear();
 		for(Map m : ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps()){
-        	String name = (m.getName() == null) ? m.getImgUrl() : m.getName();
-        	buildingChoiceBox.getItems().add(name);
+			String name = (m.getName() == null) ? m.getImgUrl() : m.getName();
+			buildingChoiceBox.getItems().add(name);
         }
 	}
 	
@@ -180,9 +180,9 @@ public class SearchMenuPane extends BorderPane {
 		if(index == -1){return;}
 		Map m = ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps().get(index);
 		if(m == null) return;
-		ControllerSingleton.getInstance().getMapRootPane().currentLevel = (int) m.getCenter().getZ();
+		ControllerSingleton.getInstance().getMapRootPane().currentLevel.setValue(m.getCenter().getZ());
 		mainPane.dropStartC = ControllerSingleton.getInstance().getMapRootPane().translate;
-		//mainPane.dropStartR = ControllerSingleton.getInstance().getMapRootPane().rot;
+		mainPane.dropStartR = ControllerSingleton.getInstance().getMapRootPane().rot;
 		mainPane.dropStartS = ControllerSingleton.getInstance().getMapRootPane().zoom;
 		
 		//float zx = (float) (m.getCenter().getX() + m.getImage().getWidth() * 0.5f * m.getScale());
@@ -203,7 +203,6 @@ public class SearchMenuPane extends BorderPane {
 		//ControllerSingleton.getInstance().getMapRootPane().translate = mainPane.dropEndC;
 	//	ControllerSingleton.getInstance().getMapRootPane().rot = mainPane.dropEndR;
 	//	ControllerSingleton.getInstance().getMapRootPane().translate = mainPane.dropEndC;
-		
 		ControllerSingleton.getInstance().getMapRootPane().render();
 		//buildingChoiceBox.getSelectionModel().clearSelection();
 	}

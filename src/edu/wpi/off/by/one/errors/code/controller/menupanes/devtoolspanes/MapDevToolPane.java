@@ -44,6 +44,7 @@ public class MapDevToolPane extends VBox {
 	@FXML TextField zTextField;
 	@FXML TextField rotationTextField;
 	@FXML TextField scaleTextField;
+	@FXML TextField mapTagTextField;
 	@FXML Label pathLabel;
 	@FXML Button changeImageButton;
 	@FXML ToggleButton selectColorButton;
@@ -57,7 +58,7 @@ public class MapDevToolPane extends VBox {
 
 
 	public MapDevToolPane() {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("../../../view/menupanes/devtoolspanes/MapDevToolPane.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/wpi/off/by/one/errors/code/view/menupanes/devtoolspanes/MapDevToolPane.fxml"));
 		loader.setRoot(this);
 		loader.setController(this);
 
@@ -77,8 +78,6 @@ public class MapDevToolPane extends VBox {
 			//should be change map info
 			changeDisplay();
 		});
-		
-		this.selectColorButton.setStyle("-fx-background-color: #CC3341;");
 		
 		this.mapChoiceBox.setOnContextMenuRequested(e->{
 			MapRootPane mapRoot = ControllerSingleton.getInstance().getMapRootPane();
@@ -186,32 +185,45 @@ public class MapDevToolPane extends VBox {
 			this.mapList = maps;
 			mapChoiceBox.getItems().clear();
 			for(Map m : maps){
-				String name = (m.getName() == null) ? m.getImgUrl() : m.getName();
+				String name = (m.getName() == null) ? ((m.getImgUrl() == null) ? "unnamed" : m.getImgUrl() ): m.getName();
 				mapChoiceBox.getItems().add(name);
 			}
 		}
 	}
+	
+	@FXML private void assignMapTag(){
+		//TODO do something to map
+	}
+	
+	@FXML private void reaffiliateNodes(){
+		//TODO do something to map
+	}
+	
+	@FXML private void disaffiliateNodes(){
+		//TODO do something to map
+	}
+	
 
-	@FXML private void toggleAutoEdge(){
-		autoEdgeSelector.isSelected();
-		//TODO do stuff w this
-	}
-	
-	@FXML private void setWalkableColor(){
-		Color color = walkableColorSelector.getValue();
-		//TODO do stuff w this
-	}
-	
-	@FXML private void selectColorOnMap(){
-		ControllerSingleton.getInstance().getMapRootPane().isEyedrop = selectColorButton.isSelected() ? true : false;
-	}
-	
-	public void setEyedroppedColor(int color){
-		this.eyedroppedColor = color;
-		System.out.println(color);
-		//walkableColorSelector.setValue();
-	}
-	
+//	@FXML private void toggleAutoEdge(){
+//		autoEdgeSelector.isSelected();
+//		//TODO do stuff w this
+//	}
+//	
+//	@FXML private void setWalkableColor(){
+//		Color color = walkableColorSelector.getValue();
+//		//TODO do stuff w this
+//	}
+//	
+//	@FXML private void selectColorOnMap(){
+//		ControllerSingleton.getInstance().getMapRootPane().isEyedrop = selectColorButton.isSelected() ? true : false;
+//	}
+//	
+//	public void setEyedroppedColor(int color){
+//		this.eyedroppedColor = color;
+//		System.out.println(color);
+//		//walkableColorSelector.setValue();
+//	}
+//	
 	/**
 	 * Parses/cleans input string to only contain
 	 * numerical values

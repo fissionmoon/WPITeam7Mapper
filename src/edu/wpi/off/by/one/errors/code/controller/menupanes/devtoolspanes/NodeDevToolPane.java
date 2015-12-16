@@ -47,10 +47,12 @@ public class NodeDevToolPane extends VBox {
 	@FXML CheckBox mensCheckbox;
 	@FXML CheckBox womensCheckbox;
 	@FXML CheckBox genderNeutralCheckbox;
+	@FXML CheckBox stairsCheckbox;
+	@FXML CheckBox elevatorCheckbox;
 	
 	
     public NodeDevToolPane(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../../view/menupanes/devtoolspanes/NodeDevToolPane.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/wpi/off/by/one/errors/code/view/menupanes/devtoolspanes/NodeDevToolPane.fxml"));
         loader.setRoot(this);
         loader.setController(this);
 
@@ -85,6 +87,8 @@ public class NodeDevToolPane extends VBox {
     	mensCheckbox.setSelected(g.returnNodeById(nd.getNode()).isMens());
     	womensCheckbox.setSelected(g.returnNodeById(nd.getNode()).isWomens());
     	genderNeutralCheckbox.setSelected(g.returnNodeById(nd.getNode()).isGenderNeutral());
+    	stairsCheckbox.setSelected(g.returnNodeById(nd.getNode()).isStairs());
+    	elevatorCheckbox.setSelected(g.returnNodeById(nd.getNode()).isElevator());
     }
     
     private void setListeners(){
@@ -162,6 +166,14 @@ public class NodeDevToolPane extends VBox {
     @FXML private void toggleIsAccessible() {
     	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
     	n.setAccessible(accessibleCheckbox.isSelected() ? true : false);
+    }
+    @FXML private void toggleIsStairs() {
+    	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
+    	n.setStairs(stairsCheckbox.isSelected() ? true : false);
+    }
+    @FXML private void toggleIsElevator() {
+    	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
+    	n.setElevator(elevatorCheckbox.isSelected() ? true : false);
     }
     @FXML private void toggleIsFood() {
     	Node n = currentDisplay.getGraph().returnNodeById(currentNd.getNode());
