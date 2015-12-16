@@ -228,7 +228,7 @@ p 1003.564941 963.959167 1.000000 _ a_ Atwater_Kent
 p 999.113037 960.929504 1.000000 _ a_ Atwater_Kent 
 p 996.542542 959.215820 1.000000 _ a_ Atwater_Kent 
 p 992.259338 957.087402 1.000000 _ a_ Atwater_Kent 
-p 1005.307251 954.974487 1.000000 Pumpkin_Lounge,ak,Atwater_Kent a_ Atwater_Kent 
+p 1005.307251 954.974487 1.000000 Pumpkin_Lounge,ak,Atwater_Kent,ak,Atwater_Kent,ak,Atwater_Kent a_ Atwater_Kent 
 p 992.448730 945.024231 1.000000 _ a_ Atwater_Kent 
 p 991.450684 947.548523 1.000000 _ a_ Atwater_Kent 
 p 986.021118 945.217651 1.000000 _ a_ Atwater_Kent 
@@ -247,7 +247,7 @@ p 1033.297119 943.688843 1.000000 _ a_ Atwater_Kent
 p 1029.707153 949.310120 1.000000 _ a_ Atwater_Kent 
 p 1027.186401 947.510315 1.000000 _ a_ Atwater_Kent 
 p 1026.746704 954.835571 1.000000 _ a_ Atwater_Kent 
-p 1029.638672 956.390320 1.000000 Robotics_Lab,ak,Atwater_Kent a_ Atwater_Kent 
+p 1029.638672 956.390320 1.000000 Robotics_Lab,ak,Atwater_Kent,ak,Atwater_Kent,ak,Atwater_Kent a_ Atwater_Kent 
 p 1029.036499 964.195984 1.000000 _ a_ Atwater_Kent 
 p 1035.181641 966.480713 1.000000 _ a_ Atwater_Kent 
 p 1043.225098 969.057617 1.000000 _ a_ Atwater_Kent 
@@ -284,7 +284,7 @@ p 1037.858276 947.126099 1.000000 _ a_ Atwater_Kent
 p 1041.990356 955.483215 1.000000 _ a_ Atwater_Kent 
 p 1033.583740 948.562622 1.000000 _ a_ Atwater_Kent 
 p 1019.113098 965.471680 1.000000 _ a_ Atwater_Kent 
-p 1015.234802 961.050659 1.000000 ak,Atwater_Kent a_ Atwater_Kent 
+p 1015.234802 961.050659 1.000000 ak,Atwater_Kent,Atwater_Kent,Atwater_Kent a_ Atwater_Kent 
 p 1020.748840 958.262756 1.000000 _ a_ Atwater_Kent 
 p 1012.327942 954.549316 1.000000 _ a_ Atwater_Kent 
 p 1023.338074 952.982422 1.000000 _ a_ Atwater_Kent 
@@ -315,7 +315,7 @@ p 1000.079773 932.204773 2.000000 _ a_ Atwater_Kent
 p 996.386108 930.646362 2.000000 _ a_ Atwater_Kent 
 p 1004.336365 934.777100 2.000000 _ a_ Atwater_Kent 
 p 819.111572 1033.231567 1.000000 _ am_ Campus_Center 
-p 826.567749 1034.547363 1.000000 Women's_Bathroom,cc,Campus_Center aw_ Campus_Center 
+p 826.567749 1034.547363 1.000000 Women's_Bathroom,cc,Campus_Center,cc,Campus_Center,cc,Campus_Center aw_ Campus_Center 
 p 822.971252 1033.933228 1.000000 _ a_ Campus_Center 
 p 823.234375 1031.564819 1.000000 _ a_ Campus_Center 
 p 824.287048 1026.564819 1.000000 _ a_ Campus_Center 
@@ -331,13 +331,13 @@ p 820.690552 1020.687683 1.000000 _ a_ Campus_Center
 p 818.848450 1015.249084 1.000000 _ a_ Campus_Center 
 p 819.023865 1013.143799 1.000000 _ a_ Campus_Center 
 p 820.778259 1015.336792 1.000000 _ a_ Campus_Center 
-p 850.982910 1033.147095 1.000000 Octowedge,cc,Campus_Center,octowedge,fireplace a_ Campus_Center 
+p 850.982910 1033.147095 1.000000 Octowedge,cc,Campus_Center,octowedge,fireplace,cc,Campus_Center,octowedge,fireplace,cc,Campus_Center,octowedge,fireplace a_ Campus_Center 
 p 835.829651 1053.567017 1.000000 _ a_ 
 p 839.043396 1035.192261 1.000000 _ a_ Campus_Center 
 p 839.776978 1028.406494 1.000000 _ a_ Campus_Center 
 p 829.020691 1016.955322 1.000000 _ a_ Campus_Center 
 p 841.433228 1020.827148 1.000000 _ a_ Campus_Center 
-p 834.120178 1022.298157 1.000000 Helpdesk,cc,Campus_Center,helpdesk,infodesk a_ Campus_Center 
+p 834.120178 1022.298157 1.000000 Helpdesk,cc,Campus_Center,helpdesk,infodesk,cc,Campus_Center,helpdesk,infodesk,cc,Campus_Center,helpdesk,infodesk a_ Campus_Center 
 p 831.412048 1027.545898 1.000000 _ a_ Campus_Center 
 p 825.085144 1026.508545 1.000000 _ a_ Campus_Center 
 p 825.786926 1022.648926 1.000000 _ a_ Campus_Center 
@@ -348,9 +348,9 @@ p 827.892212 1008.701599 1.000000 _ a_ Campus_Center
 p 829.295715 1006.333130 1.000000 _ a_ Campus_Center 
 p 830.260620 1032.912109 1.000000 _ a_ Campus_Center 
 p 843.593933 1011.947205 1.000000 _ a_ Campus_Center 
-p 851.225464 978.526184 1.000000 Dunkin'_Donuts,cc,Campus_Center,dunkin_donuts a_ Campus_Center 
+p 851.225464 978.526184 1.000000 Dunkin'_Donuts,cc,Campus_Center,dunkin_donuts,cc,Campus_Center,dunkin_donuts,cc,Campus_Center,dunkin_donuts a_ Campus_Center 
 p 846.268005 986.148438 1.000000 _ af_ Campus_Center 
-p 855.660156 987.674683 1.000000 Bookstore,barnes&noble,bookstore,cc,Campus_Center a_ Campus_Center 
+p 855.660156 987.674683 1.000000 Bookstore,barnes&noble,bookstore,cc,Campus_Center,barnes&noble,bookstore,cc,Campus_Center,barnes&noble,bookstore,cc,Campus_Center a_ Campus_Center 
 p 982.599182 943.586487 1.000000 _ a_ Atwater_Kent 
 p 980.878540 936.621643 1.000000 _ a_ Atwater_Kent 
 p 986.079895 937.557617 1.000000 _ a_ Atwater_Kent 
@@ -375,13 +375,13 @@ p 977.005737 925.428589 1.000000 _ a_ Atwater_Kent
 p 989.322998 918.415222 1.000000 _ a_ Atwater_Kent 
 p 998.502136 923.599976 1.000000 _ a_ Atwater_Kent 
 p 998.824524 920.455872 1.000000 _ a_ Atwater_Kent 
-p 1001.572693 915.496948 1.000000 ak116,ak,Atwater_Kent a_ Atwater_Kent 
-p 986.030029 907.212402 1.000000 Atwater_Kent,ak116 a_ Atwater_Kent 
+p 1001.572693 915.496948 1.000000 ak116,ak,Atwater_Kent,ak,Atwater_Kent,ak,Atwater_Kent a_ Atwater_Kent 
+p 986.030029 907.212402 1.000000 Atwater_Kent,ak116,ak116,ak116 a_ Atwater_Kent 
 p 984.358887 911.300293 1.000000 _ a_ Atwater_Kent 
 p 976.186646 907.156250 1.000000 _ a_ Atwater_Kent 
 p 981.803406 914.533142 1.000000 _ a_ Atwater_Kent 
 p 988.130554 917.497131 1.000000 _ a_ Atwater_Kent 
-p 1001.432068 902.522644 1.000000 AK116,ak,Atwater_Kent,ak116,lecture_hall,Newell_Lecture_Hall,electronic_classroom a_ Atwater_Kent 
+p 1001.432068 902.522644 1.000000 AK116,ak,Atwater_Kent,ak116,lecture_hall,Newell_Lecture_Hall,electronic_classroom,ak,Atwater_Kent,ak116,lecture_hall,Newell_Lecture_Hall,electronic_classroom,ak,Atwater_Kent,ak116,lecture_hall,Newell_Lecture_Hall,electronic_classroom a_ Atwater_Kent 
 p 950.852966 1082.933105 1.000000 _ a_ Project_Center 
 p 944.449463 1083.284058 1.000000 _ a_ Project_Center 
 p 959.624878 1093.108643 1.000000 _ a_ Project_Center 
@@ -821,7 +821,7 @@ p 1086.430298 943.995422 1.000000 _ a_ Fuller_Labs
 p 1090.685425 948.092957 1.000000 _ a_ Fuller_Labs 
 p 1091.788574 951.244934 1.000000 _ a_ Fuller_Labs 
 p 1071.773560 997.736511 1.000000 _ a_ Fuller_Labs 
-p 1074.610352 1006.089233 1.000000 IMGD_Lab,fuller,fuller_labs a_ Fuller_Labs 
+p 1074.610352 1006.089233 1.000000 IMGD_Lab,fuller,fuller_labs,fuller,fuller_labs,fuller,fuller_labs a_ Fuller_Labs 
 p 1093.837402 986.862244 1.000000 _ a_ Fuller_Labs 
 p 1097.146973 991.905396 1.000000 _ a_ Fuller_Labs 
 p 1093.049438 993.481323 1.000000 _ a_ Fuller_Labs 
@@ -1046,8 +1046,8 @@ p 1094.901733 983.158630 0.000000 _ a_ Fuller_Labs
 p 1093.565796 980.853882 0.000000 _ a_ Fuller_Labs 
 p 1096.671509 976.827576 0.000000 _ a_ Fuller_Labs 
 p 1074.173584 992.752747 1.000000 _ a_ Fuller_Labs 
-p 1071.917603 989.669556 1.000000 Fuller_Upper_Lecture_Hall,flupper,fuller_labs,fuller a_ Fuller_Labs 
-p 1060.255249 991.367432 1.000000 Fuller_Commons,fuller_labs a_ Fuller_Labs 
+p 1071.917603 989.669556 1.000000 Fuller_Upper_Lecture_Hall,flupper,fuller_labs,fuller,flupper,fuller_labs,fuller,flupper,fuller_labs,fuller a_ Fuller_Labs 
+p 1060.255249 991.367432 1.000000 Fuller_Commons,fuller_labs,fuller_labs,fuller_labs a_ Fuller_Labs 
 p 1067.529785 971.615784 1.000000 _ a_ Fuller_Labs 
 p 1075.207764 971.010010 1.000000 _ a_ Fuller_Labs 
 p 1081.322388 983.311340 1.000000 _ a_ Fuller_Labs 
@@ -1058,8 +1058,8 @@ p 1061.777344 1109.939819 1.000000 _ a_
 p 1079.116455 1113.068848 1.000000 _ a_ Gordon_Library 
 p 1090.336914 1115.346680 1.000000 _ a_ Gordon_Library 
 p 1100.244141 1118.993896 1.000000 _ a_ Gordon_Library 
-p 1100.707397 1114.275146 1.000000 Print_Center,library,Gordon_Library a_ Gordon_Library 
-p 1081.718872 1123.418579 1.000000 Helpdesk,library,Gordon_Library a_ Gordon_Library 
+p 1100.707397 1114.275146 1.000000 Print_Center,library,Gordon_Library,library,Gordon_Library,library,Gordon_Library a_ Gordon_Library 
+p 1081.718872 1123.418579 1.000000 Helpdesk,library,Gordon_Library,library,Gordon_Library,library,Gordon_Library a_ Gordon_Library 
 p 1003.578491 1055.486084 1.000000 _ a_ Salisbury_Labs 
 p 1014.482605 1058.109009 1.000000 _ a_ Salisbury_Labs 
 p 1013.626892 1065.534424 1.000000 _ a_ Salisbury_Labs 
@@ -1112,12 +1112,12 @@ p 920.097839 1130.235962 1.000000 _ a_
 p 962.636841 1136.807129 1.000000 _ a_ 
 p 956.757507 1169.316528 1.000000 _ a_ 
 p 913.872620 1160.324585 1.000000 _ a_ 
-p 973.547974 1218.612305 1.000000 _ a_ Boynton_Hall 
+p 973.547974 1218.612305 1.000000 _ a_ 
 p 927.060364 1163.204956 1.000000 _ a_ Stratton_Hall 
 p 922.700317 1162.168945 1.000000 _ a_ 
 p 921.730713 1168.678467 1.000000 _ a_ 
 p 925.734924 1169.206299 1.000000 _ a_ Stratton_Hall 
-p 790.864807 1191.789795 1.000000 Bartlett_Center,Admission's_Office a_ Bartlett_Center 
+p 790.864807 1191.789795 1.000000 Bartlett_Center,Admission's_Office,Admission's_Office,Admission's_Office a_ Bartlett_Center 
 p 755.961670 1215.980713 1.000000 _ a_ 
 p 771.487976 1181.945557 1.000000 _ a_ Bartlett_Center 
 p 769.382690 1196.506958 1.000000 _ a_ Bartlett_Center 
@@ -1462,7 +1462,7 @@ p 1015.190308 1053.401733 1.000000 _ a_ Salisbury_Labs
 p 1012.479004 1052.694458 1.000000 _ a_ Salisbury_Labs 
 p 1012.950500 1049.983154 1.000000 _ am_ Salisbury_Labs 
 p 1017.312195 1043.853149 1.000000 _ a_ Salisbury_Labs 
-p 1019.434143 1033.597290 1.000000 _SL115 a_ Salisbury_Labs 
+p 1019.434143 1033.597290 1.000000 SL115 a_ Salisbury_Labs 
 p 1018.962585 1036.780151 1.000000 _ a_ Salisbury_Labs 
 p 1022.257202 1036.639526 1.000000 _ a_ Salisbury_Labs 
 p 1024.274780 1037.165771 1.000000 _ a_ Salisbury_Labs 
@@ -1630,7 +1630,7 @@ p 1016.629028 1081.923096 3.000000 _ a_ Salisbury_Labs
 p 1016.102722 1084.642334 3.000000 SL329,SL,Salisbury_Labs a_ Salisbury_Labs 
 p 1011.278137 1081.221313 3.000000 SL328,SL,Salisbury_Labs a_ Salisbury_Labs 
 p 1013.578674 1067.803589 3.000000 _ a_ Salisbury_Labs 
-p 1016.900818 1072.733154 3.000000 SL326A_,SL,Salisbury_Labs a_ Salisbury_Labs 
+p 1016.900818 1072.733154 3.000000 SL326A,SL,Salisbury_Labs a_ Salisbury_Labs 
 p 1013.295715 1072.186157 3.000000 _ a_ Salisbury_Labs 
 p 1004.898071 1056.336670 3.000000 _ a_ Salisbury_Labs 
 p 1005.862549 1051.514160 3.000000 _ a_ Salisbury_Labs 
@@ -1747,64 +1747,284 @@ p 971.521057 1234.856079 2.000000 _ a_ Boynton_Hall
 p 972.159790 1231.023560 2.000000 _ ae_ Boynton_Hall 
 p 1003.842590 1249.420044 2.000000 _ a_ Boynton_Hall 
 p 969.349243 1232.812134 2.000000 _ a_ Boynton_Hall 
-p 967.432922 1232.045532 2.000000 _Boynton_Hall_210 a_ Boynton_Hall 
-p 970.754517 1225.530151 2.000000 _Boynton_Hall_211 a_ Boynton_Hall 
-p 968.327209 1225.146851 2.000000 _Boynton_Hall_211A a_ Boynton_Hall 
+p 967.432922 1232.045532 2.000000 Boynton_Hall_210 a_ Boynton_Hall 
+p 970.754517 1225.530151 2.000000 Boynton_Hall_211 a_ Boynton_Hall 
+p 968.327209 1225.146851 2.000000 Boynton_Hall_211A a_ Boynton_Hall 
 p 968.710449 1235.494873 2.000000 _ a_ Boynton_Hall 
 p 962.067261 1234.472900 2.000000 _ a_ Boynton_Hall 
 p 962.450562 1230.895752 2.000000 _ a_ Boynton_Hall 
 p 956.701660 1230.384766 2.000000 _ a_ Boynton_Hall 
-p 957.340393 1227.063232 2.000000 _Boynton_Hall_202 a_ Boynton_Hall 
-p 960.534241 1227.318726 2.000000 _Boynton_Hall_204 a_ Boynton_Hall 
-p 949.419739 1225.657959 2.000000 _Boynton_Hall_201 a_ Boynton_Hall 
+p 957.340393 1227.063232 2.000000 Boynton_Hall_202 a_ Boynton_Hall 
+p 960.534241 1227.318726 2.000000 Boynton_Hall_204 a_ Boynton_Hall 
+p 949.419739 1225.657959 2.000000 Boynton_Hall_201 a_ Boynton_Hall 
 p 954.018799 1231.151245 2.000000 _ a_ Boynton_Hall 
 p 945.714844 1229.490479 2.000000 _ a_ Boynton_Hall 
 p 944.692810 1236.644653 2.000000 _ a_ Boynton_Hall 
 p 948.142151 1237.027954 2.000000 _ a_ Boynton_Hall 
-p 952.613525 1238.049927 2.000000 _Boynton_Hall_206 a_ Boynton_Hall 
+p 952.613525 1238.049927 2.000000 Boynton_Hall_206 a_ Boynton_Hall 
 p 956.318359 1238.816528 2.000000 _ a_ Boynton_Hall 
 p 957.084900 1236.133667 2.000000 _ a_ Boynton_Hall 
 p 960.406494 1239.455200 2.000000 _ a_ Boynton_Hall 
 p 959.512207 1242.393555 2.000000 _ a_ Boynton_Hall 
-p 955.040833 1241.371582 2.000000 _Boynton_Hall_207 a_ Boynton_Hall 
-p 947.886658 1240.221802 2.000000 _Boynton_Hall_224 a_ Boynton_Hall 
+p 955.040833 1241.371582 2.000000 Boynton_Hall_207 a_ Boynton_Hall 
+p 947.886658 1240.221802 2.000000 Boynton_Hall_224 a_ Boynton_Hall 
 p 972.926331 1235.239380 2.000000 _ a_ Boynton_Hall 
 p 974.842590 1235.622681 2.000000 _ a_ Boynton_Hall 
 p 975.481384 1232.684326 2.000000 Boynton_Hall_212 a_ Boynton_Hall 
 p 979.952759 1233.323120 2.000000 _ a_ Boynton_Hall 
-p 980.335999 1228.723999 2.000000 _Boynton_Hall_216 a_ Boynton_Hall 
+p 980.335999 1228.723999 2.000000 Boynton_Hall_216 a_ Boynton_Hall 
 p 983.785339 1233.706421 2.000000 _ a_ Boynton_Hall 
-p 984.040833 1229.873779 2.000000 _Boynton_Hall_215 a_ Boynton_Hall 
-p 988.384460 1234.089600 2.000000 _Boynton_hall_214 a_ Boynton_Hall 
+p 984.040833 1229.873779 2.000000 Boynton_Hall_215 a_ Boynton_Hall 
+p 988.384460 1234.089600 2.000000 Boynton_hall_214 a_ Boynton_Hall 
 p 989.278748 1230.640259 2.000000 _ a_ Boynton_Hall 
 p 986.340393 1233.961914 2.000000 _ a_ Boynton_Hall 
-p 985.318359 1241.371582 2.000000 _Boynton_Hall_213 a_ Boynton_Hall 
+p 985.318359 1241.371582 2.000000 Boynton_Hall_213 a_ Boynton_Hall 
 p 994.261108 1234.983887 2.000000 _ a_ Boynton_Hall 
 p 993.877869 1230.512573 2.000000 _ a_ Boynton_Hall 
 p 995.794128 1235.367188 2.000000 _ a_ Boynton_Hall 
 p 996.688416 1231.023560 2.000000 _ a_ Boynton_Hall 
 p 999.371277 1235.622681 2.000000 _ a_ Boynton_Hall 
-p 1000.265503 1231.790039 2.000000 _Boynton_Hall_219 a_ Boynton_Hall 
+p 1000.265503 1231.790039 2.000000 Boynton_Hall_219 a_ Boynton_Hall 
 p 1001.670837 1240.732788 2.000000 _ a_ Boynton_Hall 
-p 1004.225891 1240.988281 2.000000 _Boynton_Hall_222 a_ Boynton_Hall 
+p 1004.225891 1240.988281 2.000000 Boynton_Hall_222 a_ Boynton_Hall 
 p 998.732483 1246.098389 2.000000 _ a_ Boynton_Hall 
 p 1002.437317 1245.842896 2.000000 _ a_ Boynton_Hall 
-p 993.877869 1245.331909 2.000000 _Boynton_Hall_200F a_ Boynton_Hall 
-p 993.732727 1248.284912 2.000000 _Boynton_Hall_213B a_ Boynton_Hall 
+p 993.877869 1245.331909 2.000000 Boynton_Hall_200F a_ Boynton_Hall 
+p 993.732727 1248.284912 2.000000 Boynton_Hall_213B a_ Boynton_Hall 
 p 998.093689 1248.525757 2.000000 _ a_ Boynton_Hall 
 p 1001.543030 1249.036743 2.000000 _ a_ Boynton_Hall 
 p 972.287537 1239.072021 2.000000 _ a_ Boynton_Hall 
 p 971.521057 1245.204102 2.000000 _ a_ Boynton_Hall 
 p 973.565063 1245.459717 2.000000 _ a_ Boynton_Hall 
-p 964.622314 1237.922241 2.000000 _ s_ Boynton_Hall 
+p 964.622314 1237.922241 2.000000 _ as_ Boynton_Hall 
 p 971.776550 1241.627075 2.000000 _ a_ Boynton_Hall 
-p 964.210632 1240.186279 2.000000 _ s_ Boynton_Hall 
+p 964.210632 1240.186279 2.000000 _ as_ Boynton_Hall 
 p 1003.331604 1254.913452 2.000000 _ as_ Boynton_Hall 
 p 1001.287537 1254.274658 2.000000 _ as_ Boynton_Hall 
 p 998.205994 1251.626221 2.000000 Boynton_Hall_224 a_ Boynton_Hall 
-p 1007.346863 1236.302612 2.000000 _ a_ 
-p 943.764038 1240.449707 2.000000 _ a_ 
-p 979.280884 1236.464966 2.000000 _ a_ 
+p 1007.346863 1236.302612 2.000000 _ a_ Boynton_Hall 
+p 943.764038 1240.449707 2.000000 _ a_ Boynton_Hall 
+p 979.280884 1236.464966 2.000000 _ a_ Boynton_Hall 
+p 1108.651611 963.695251 1.000000 _ a_ Fuller_Labs 
+p 1014.676697 1057.285767 1.000000 _ a_ Salisbury_Labs 
+p 973.474731 1219.074707 1.000000 _ a_ 
+p 954.555298 1223.418579 0.000000 _ aw_ Boynton_Hall 
+p 961.834717 1223.626465 0.000000 _ am_ Boynton_Hall 
+p 1006.963135 1062.126343 2.000000 _ a_ Salisbury_Labs 
+p 718.986023 1101.039307 1.000000 _ a_ 
+p 715.297424 1099.655762 1.000000 Harrington_Auditorium_222 a_ Harrington_Gym 
+p 715.782776 1095.469604 1.000000 _ a_ Harrington_Gym 
+p 721.714905 1096.911133 1.000000 _ a_ 
+p 695.235046 1102.961548 1.000000 _ a_ Harrington_Gym 
+p 686.032593 1101.176636 1.000000 _ a_ Harrington_Gym 
+p 676.967834 1099.979492 1.000000 _ a_ Harrington_Gym 
+p 678.308350 1090.955200 1.000000 _ a_ Harrington_Gym 
+p 687.736145 1093.051636 1.000000 Harrington_Auditorium_201 a_ Harrington_Gym 
+p 697.861389 1094.229736 1.000000 _ a_ Harrington_Gym 
+p 716.252563 1092.390137 1.000000 _ a_ Harrington_Gym 
+p 728.015991 1094.051636 1.000000 _ a_ Harrington_Gym 
+p 733.102905 1094.235474 1.000000 Harrington_Auditorium_220 a_ Harrington_Gym 
+p 735.128357 1081.436157 1.000000 Harrington_Auditorium_220A aw_ Harrington_Gym 
+p 724.485962 1040.406494 1.000000 _ a_ Harrington_Gym 
+p 741.462952 1042.562500 1.000000 _ a_ Harrington_Gym 
+p 740.355774 1050.113892 1.000000 _ a_ Harrington_Gym 
+p 736.661011 1049.024048 1.000000 Harrington_Auditorium_215 a_ Harrington_Gym 
+p 739.535889 1057.533203 1.000000 Harrington_Auditorium_219 a_ Harrington_Gym 
+p 737.420410 1067.489746 1.000000 Harrington_Auditorium_219A am_ Harrington_Gym 
+p 745.487671 1053.205688 2.000000 Harrington_Auditorium_308 a_ Harrington_Gym 
+p 666.246582 1087.508301 1.000000 _ a_ Harrington_Gym 
+p 660.615051 1086.616333 1.000000 _ a_ Harrington_Gym 
+p 660.488647 1083.687866 1.000000 _ a_ Harrington_Gym 
+p 647.311951 1080.699463 1.000000 _ a_ Harrington_Gym 
+p 649.984680 1054.561401 1.000000 Harrington_Auditorium_209,Harrington_Auditorium_209,Harrington_209,209_Harrington_Auditorium,209_Harrington a_ Harrington_Gym 
+p 652.923950 1042.827393 1.000000 _ a_ Harrington_Gym 
+p 649.783386 1042.329956 1.000000 Harrington_Auditorium_210,Harrington_Auditorium_210,Harrington_210,210_Harrington_Auditorium,210_Harrington a_ Harrington_Gym 
+p 654.605164 1034.387695 1.000000 _ a_ Harrington_Gym 
+p 651.361511 1033.179443 1.000000 Harrington_Auditorium_211,Harrington_211,211_Harrington_Auditorium,211_Harrington a_ Harrington_Gym 
+p 654.097778 1051.043701 1.000000 Harrington_Auditorium_209A,Harrington_209A,209A_Harrington_Auditorium,209A_Harrington a_ Harrington_Gym 
+p 653.632202 1054.236450 1.000000 Harrington_Auditorium_209A,Harrington_209A,209A_Harrington_Auditorium,209A_Harrington a_ Harrington_Gym 
+p 653.014160 1057.343994 1.000000 Harrington_Auditorium_209A,Harrington_209A,209A_Harrington_Auditorium,209A_Harrington a_ Harrington_Gym 
+p 652.558289 1060.459106 1.000000 Harrington_Auditorium_209A,Harrington_209A,209A_Harrington_Auditorium,209A_Harrington a_ Harrington_Gym 
+p 648.614319 1068.538086 1.000000 _ a_ Harrington_Gym 
+p 644.104736 1067.290894 1.000000 Harrington_Auditorium_208,Harrington_208,208_Harrington_Auditorium,208_Harrington a_ Harrington_Gym 
+p 648.219299 1070.869263 1.000000 _ a_ Harrington_Gym 
+p 643.738525 1070.163696 1.000000 _ a_ Harrington_Gym 
+p 646.621582 1068.222412 1.000000 Harrington_Auditorium_207 a_ Harrington_Gym 
+p 647.932434 1073.403564 1.000000 _ a_ Harrington_Gym 
+p 644.293579 1072.827271 1.000000 Harrington_Auditorium_206 a_ Harrington_Gym 
+p 647.214600 1077.375244 1.000000 _ a_ Harrington_Gym 
+p 644.268860 1076.908691 1.000000 Harrington_Auditorium_205 a_ Harrington_Gym 
+p 655.721680 1082.541504 1.000000 Harrington_Auditorium_204 a_ Harrington_Gym 
+p 659.999695 1091.558105 1.000000 Harrington_Auditorium_202 a_ Harrington_Gym 
+p 655.529846 1029.179199 1.000000 _ a_ Harrington_Gym 
+p 654.801147 1091.713623 1.000000 _ as_ Harrington_Gym 
+p 723.750977 1093.415894 1.000000 Harrington_Auditorium_201B a_ Harrington_Gym 
+p 731.723022 1070.646240 1.000000 Harrington_Auditorium_219X a_ Harrington_Gym 
+p 652.009033 1098.513184 1.000000 _ a_ 
+p 668.939636 1031.252563 1.000000 _ a_ Harrington_Gym 
+p 715.931519 1104.044067 1.000000 _ as_ Harrington_Gym 
+p 713.401672 1106.608032 2.000000 Harrington_Auditorium_316 a_ Harrington_Gym 
+p 712.627869 1103.420044 2.000000 _ as_ Harrington_Gym 
+p 712.028320 1106.285767 2.000000 _ a_ Harrington_Gym 
+p 715.161743 1106.812378 2.000000 _ a_ Harrington_Gym 
+p 715.726990 1104.559692 2.000000 _ as_ Harrington_Gym 
+p 714.834778 1091.835693 2.000000 _ a_ Harrington_Gym 
+p 733.993835 1094.612427 2.000000 _ a_ Harrington_Gym 
+p 737.909119 1068.057129 2.000000 Harrington_Auditorium_302B a_ Harrington_Gym 
+p 743.676147 1069.242798 2.000000 _ a_ Harrington_Gym 
+p 743.199951 1073.162231 2.000000 _ as_ Harrington_Gym 
+p 742.848877 1076.213623 2.000000 Harrington_Auditorium_318 a_ Harrington_Gym 
+p 749.924622 1077.165405 2.000000 _ a_ Harrington_Gym 
+p 751.293030 1070.966431 2.000000 _ a_ Harrington_Gym 
+p 747.912537 1088.009766 2.000000 Harrington_Auditorium_314 a_ Harrington_Gym 
+p 752.440674 1065.326782 2.000000 Harrington_Auditorium_311 a_ Harrington_Gym 
+p 753.809814 1057.374634 2.000000 _ a_ Harrington_Gym 
+p 749.154419 1056.368896 2.000000 _ a_ Harrington_Gym 
+p 749.970154 1053.807251 2.000000 _ a_ Harrington_Gym 
+p 753.391968 1054.077026 2.000000 Harrington_Auditorium_310 a_ Harrington_Gym 
+p 750.632019 1049.213867 2.000000 Harrington_Auditorium_309 a_ Harrington_Gym 
+p 970.481934 1246.694092 1.000000 _ a_ Boynton_Hall 
+p 1001.930542 1255.808350 1.000000 _ a_ Boynton_Hall 
+p 980.248962 1244.078857 1.000000 _ a_ Boynton_Hall 
+p 982.369446 1244.148315 1.000000 _ a_ Boynton_Hall 
+p 988.335449 1241.807129 1.000000 _ a_ Boynton_Hall 
+p 989.699341 1241.046265 1.000000 _ a_ Boynton_Hall 
+p 991.751221 1241.548828 1.000000 _ a_ Boynton_Hall 
+p 997.857178 1242.249512 1.000000 _ a_ Boynton_Hall 
+p 971.216919 1239.984009 1.000000 _ a_ Boynton_Hall 
+p 973.333923 1237.832520 1.000000 _ a_ Boynton_Hall 
+p 973.677002 1235.666504 1.000000 _ a_ Boynton_Hall 
+p 976.376526 1236.005249 1.000000 _ a_ Boynton_Hall 
+p 977.428040 1230.487793 1.000000 _ a_ Boynton_Hall 
+p 981.887817 1230.927734 1.000000 _ a_ Boynton_Hall 
+p 982.404968 1227.101929 1.000000 _ a_ Boynton_Hall 
+p 989.151794 1232.167114 1.000000 _ a_ Boynton_Hall 
+p 989.901428 1228.555664 1.000000 _ a_ Boynton_Hall 
+p 994.812378 1229.511108 1.000000 _ a_ Boynton_Hall 
+p 994.098816 1234.016357 1.000000 _ a_ Boynton_Hall 
+p 996.492981 1234.040283 1.000000 _ a_ Boynton_Hall 
+p 997.124207 1230.054932 1.000000 _ a_ Boynton_Hall 
+p 994.616211 1239.160522 1.000000 _ a_ Boynton_Hall 
+p 992.176636 1238.862915 1.000000 _ a_ Boynton_Hall 
+p 998.314270 1239.923828 1.000000 _ a_ Boynton_Hall 
+p 1000.649231 1239.760742 1.000000 _ a_ Boynton_Hall 
+p 1001.472595 1234.562500 1.000000 _ a_ Boynton_Hall 
+p 1010.542236 1236.176514 1.000000 _ a_ Boynton_Hall 
+p 1009.858032 1246.104004 1.000000 _ a_ Boynton_Hall 
+p 1001.412842 1245.032837 1.000000 _ a_ Boynton_Hall 
+p 1001.763245 1241.532715 1.000000 _ a_ Boynton_Hall 
+p 970.012878 1235.082886 1.000000 _ a_ Boynton_Hall 
+p 971.828491 1224.180054 1.000000 _ a_ Boynton_Hall 
+p 968.622864 1223.672363 1.000000 _ a_ Boynton_Hall 
+p 969.085083 1220.192993 1.000000 _ a_ Boynton_Hall 
+p 973.576904 1229.963379 1.000000 _ ae_ Boynton_Hall 
+p 962.510315 1234.144775 1.000000 _ a_ Boynton_Hall 
+p 961.381592 1239.028320 1.000000 _ a_ Boynton_Hall 
+p 960.453552 1243.765991 1.000000 _ a_ Boynton_Hall 
+p 956.616394 1238.273560 1.000000 _ a_ Boynton_Hall 
+p 956.163574 1241.132690 1.000000 _ a_ Boynton_Hall 
+p 951.557983 1240.492065 1.000000 _ a_ Boynton_Hall 
+p 951.855591 1238.052368 1.000000 _ a_ Boynton_Hall 
+p 950.337219 1237.545532 1.000000 _ a_ Boynton_Hall 
+p 948.836914 1237.485474 1.000000 _ a_ Boynton_Hall 
+p 948.274292 1241.037720 1.000000 _ a_ Boynton_Hall 
+p 950.872375 1234.166504 1.000000 _ a_ Boynton_Hall 
+p 956.436523 1233.605469 1.000000 Boynton_Hall_110,Boynton_Hall_110,Boynton_110,110__Boynton_Hall,110__Boynton a_ Boynton_Hall 
+p 957.031311 1228.925171 1.000000 _ a_ Boynton_Hall 
+p 962.052063 1229.187500 1.000000 _ a_ Boynton_Hall 
+p 957.348572 1223.557861 1.000000 Boynton_Hall_118,Boynton_Hall_118,Boynton_118,118__Boynton_Hall,118__Boynton a_ Boynton_Hall 
+p 954.503174 1223.018311 1.000000 _ a_ Boynton_Hall 
+p 949.639526 1227.932007 1.000000 _ a_ Boynton_Hall 
+p 953.624939 1228.563232 1.000000 _ a_ Boynton_Hall 
+p 950.139465 1221.971924 1.000000 Boynton_Hall_116,Boynton_116,116_Boynton,116_Boynton_Hall a_ Boynton_Hall 
+p 967.492371 1229.605103 1.000000 _ a_ Boynton_Hall 
+p 689.688782 1088.713867 2.000000 Harrington_Auditorium_302 a_ Harrington_Gym 
+p 663.090332 1083.385498 2.000000 _ a_ Harrington_Gym 
+p 659.475342 1082.915527 2.000000 _ a_ Harrington_Gym 
+p 644.163086 1080.592773 2.000000 _ a_ Harrington_Gym 
+p 646.251099 1060.938965 2.000000 _ a_ Harrington_Gym 
+p 643.047791 1057.869507 2.000000 _ a_ Harrington_Gym 
+p 646.338013 1055.213623 2.000000 Harrington_Auditorium_304 a_ Harrington_Gym 
+p 643.843872 1065.784424 2.000000 Harrington_Auditorium_303 ae_ Harrington_Gym 
+p 644.298767 1049.971313 2.000000 _ a_ Harrington_Gym 
+p 647.685730 1048.884644 2.000000 Harrington_Auditorium_302A a_ Harrington_Gym 
+p 645.716125 1046.198853 2.000000 Harrington_Auditorium_305 a_ Harrington_Gym 
+p 653.016174 1073.375854 2.000000 Harrington_Auditorium_306A a_ Harrington_Gym 
+p 655.250916 1061.625488 2.000000 Harrington_Auditorium_306B a_ Harrington_Gym 
+p 657.160156 1050.046021 2.000000 Harrington_Auditorium_306C a_ Harrington_Gym 
+p 659.119507 1038.624756 2.000000 Harrington_Auditorium_306D a_ Harrington_Gym 
+p 656.280701 1056.073242 2.000000 Harrington_Auditorium_306 a_ Harrington_Gym 
+p 733.047058 1050.190308 2.000000 Harrington_Auditorium_307D a_ Harrington_Gym 
+p 731.543518 1061.525391 2.000000 Harrington_Auditorium_307C a_ Harrington_Gym 
+p 729.654663 1073.317871 2.000000 Harrington_Auditorium_307B a_ Harrington_Gym 
+p 727.601868 1085.797974 2.000000 Harrington_Auditorium_307 a_ Harrington_Gym 
+p 730.821350 1067.927002 2.000000 Harrington_Auditorium_307 a_ Harrington_Gym 
+p 746.591309 1070.208374 2.000000 Harrington_Auditorium_312C a_ Harrington_Gym 
+p 747.217407 1067.376709 2.000000 Harrington_Auditorium_312B a_ Harrington_Gym 
+p 747.597351 1064.417358 2.000000 _ a_ Harrington_Gym 
+p 748.392395 1061.079590 2.000000 Harrington_Auditorium_312A a_ Harrington_Gym 
+p 743.283386 1064.178101 2.000000 Harrington_Auditorium_312E a_ Harrington_Gym 
+p 743.873413 1060.452637 2.000000 Harrington_Auditorium_312F a_ Harrington_Gym 
+p 746.343506 1073.175293 2.000000 Harrington_Auditorium_312D a_ Harrington_Gym 
+p 646.406738 1043.618286 2.000000 _ as_ Harrington_Gym 
+p 648.161133 1039.495483 1.000000 _ as_ Harrington_Gym 
+p 658.582703 1098.460815 2.000000 Harrington_Auditorium_315 a_ Harrington_Gym 
+p 660.795776 1095.561890 2.000000 _ as_ Harrington_Gym 
+p 657.626282 1095.561890 2.000000 _ as_ Harrington_Gym 
+p 660.910156 1094.679565 1.000000 _ as_ Harrington_Gym 
+p 657.086914 1039.893677 0.000000 Harrington_Auditorium_107 a_ Harrington_Gym 
+p 646.682495 1042.847900 0.000000 Harrington_Auditorium_108 a_ Harrington_Gym 
+p 651.435120 1042.976440 0.000000 Harrington_Auditorium_105 a_ Harrington_Gym 
+p 650.290894 1052.512085 0.000000 Harrington_Auditorium_104 a_ Harrington_Gym 
+p 642.829041 1046.187622 0.000000 Harrington_Auditorium_106 a_ Harrington_Gym 
+p 652.479492 1062.966064 0.000000 Harrington_Auditorium_111A a_ Harrington_Gym 
+p 644.196533 1061.691772 0.000000 Harrington_Auditorium_111S a_ Harrington_Gym 
+p 643.984131 1066.045654 0.000000 Harrington_Auditorium_111C a_ Harrington_Gym 
+p 641.860291 1069.125122 0.000000 Harrington_Auditorium_111D a_ Harrington_Gym 
+p 646.532776 1069.762329 0.000000 Harrington_Auditorium_111 a_ Harrington_Gym 
+p 646.851318 1066.364136 0.000000 _ a_ Harrington_Gym 
+p 647.913269 1062.647461 0.000000 _ a_ Harrington_Gym 
+p 644.037415 1080.947876 0.000000 _ a_ Harrington_Gym 
+p 655.346680 1083.354858 0.000000 _ a_ Harrington_Gym 
+p 659.169678 1056.594604 0.000000 _ a_ Harrington_Gym 
+p 646.869202 1052.276123 0.000000 _ a_ Harrington_Gym 
+p 641.677612 1051.096191 0.000000 _ a_ Harrington_Gym 
+p 654.184631 1054.046021 0.000000 _ a_ Harrington_Gym 
+p 665.865662 1059.827515 0.000000 Harrington_Auditorium_102A a_ Harrington_Gym 
+p 690.216064 1064.811035 0.000000 Harrington_Auditorium_102 a_ Harrington_Gym 
+p 717.446838 1068.110474 0.000000 Harrington_Auditorium_102B a_ Harrington_Gym 
+p 720.055298 1073.947388 0.000000 _ a_ Harrington_Gym 
+p 725.284241 1068.718384 0.000000 _ a_ Harrington_Gym 
+p 660.146179 1064.535156 0.000000 _ a_ Harrington_Gym 
+p 724.198547 1077.255127 0.000000 _ a_ Harrington_Gym 
+p 721.808472 1093.794678 0.000000 _ a_ Harrington_Gym 
+p 722.860107 1085.859497 0.000000 Harrington_Auditorium_112 a_ Harrington_Gym 
+p 714.160095 1098.574951 0.000000 Harrington_Auditorium_113 a_ Harrington_Gym 
+p 706.561157 1096.817505 0.000000 Harrington_Auditorium_114 a_ Harrington_Gym 
+p 684.809448 1093.794800 0.000000 Harrington_Auditorium_115 a_ Harrington_Gym 
+p 667.600586 1090.831177 0.000000 Harrington_Auditorium_116 a_ Harrington_Gym 
+p 658.804932 1089.588257 0.000000 Harrington_Auditorium_101 a_ Harrington_Gym 
+p 732.041016 1054.341797 0.000000 Harrington_Auditorium_118 a_ Harrington_Gym 
+p 733.939392 1040.331299 0.000000 Harrington_Auditorium_108 a_ Harrington_Gym 
+p 744.321777 1068.376953 0.000000 Harrington_Auditorium_117 a_ Harrington_Gym 
+p 731.427063 1058.289185 0.000000 _ a_ Harrington_Gym 
+p 640.319031 1065.763550 0.000000 Harrington_Auditorium_104A ae_ Harrington_Gym 
+p 722.915833 1039.380981 0.000000 _ a_ Harrington_Gym 
+p 709.982239 1091.001587 0.000000 _ a_ Harrington_Gym 
+p 730.138184 1068.080200 0.000000 Harrington_Auditorium_110 a_ Harrington_Gym 
+p 732.799011 1048.313843 0.000000 _ a_ Harrington_Gym 
+p 650.276611 1039.720703 1.000000 _ as_ Harrington_Gym 
+p 646.752686 1039.178345 0.000000 _ as_ Harrington_Gym 
+p 664.827698 1025.887573 -1.000000 _ a_ Harrington_Gym 
+p 661.462952 1044.320557 -1.000000 _ a_ Harrington_Gym 
+p 665.120300 1043.589111 -1.000000 _ a_ Harrington_Gym 
+p 666.583252 1038.029907 -1.000000 _ a_ Harrington_Gym 
+p 655.464966 1042.565063 -1.000000 _ a_ Harrington_Gym 
+p 659.707458 1056.316528 -1.000000 _ a_ Harrington_Gym 
+p 663.657410 1057.340576 -1.000000 _ a_ Harrington_Gym 
+p 662.340759 1068.897827 -1.000000 _ a_ Harrington_Gym 
+p 663.949951 1053.098145 -1.000000 _ a_ Harrington_Gym 
+p 664.973999 1049.001831 -1.000000 _ a_ Harrington_Gym 
 e 17 22
 e 22 21
 e 21 86
@@ -3748,6 +3968,191 @@ e 1799 1795
 e 1795 1770
 e 1798 1795
 e 1799 1800
+e 24 33
+e 55 1055
+e 1064 1808
+e 1808 1062
+e 1062 1055
+e 793 1807
+e 1857 1859
+e 1859 1862
+e 1862 1107
+e 1862 7
+e 1869 1868
+e 1868 1865
+e 1865 1867
+e 1867 1866
+e 1866 1870
+e 1871 1870
+e 1941 1940
+e 1940 1870
+e 1941 1942
+e 1942 1943
+e 1943 1944
+e 1944 1945
+e 1945 1948
+e 1948 1949
+e 1949 1950
+e 1944 1946
+e 1944 1947
+e 1871 1872
+e 1872 1873
+e 1873 1874
+e 1874 1875
+e 1875 1876
+e 1876 1877
+e 1877 1879
+e 1879 1880
+e 1880 1881
+e 1881 1882
+e 1882 1884
+e 1882 1883
+e 1878 1876
+e 1954 1953
+e 1953 1955
+e 1955 1952
+e 1952 1951
+e 1951 1942
+e 1951 1943
+e 1952 1944
+e 1949 1953
+e 1956 1957
+e 1957 1960
+e 1960 1958
+e 1958 1959
+e 1959 1871
+e 1870 1959
+e 1960 1872
+e 1966 1965
+e 1965 1963
+e 1963 1962
+e 1962 1961
+e 1961 1877
+e 1967 1961
+e 1963 1964
+e 1963 1879
+e 1103 1813
+e 1813 1814
+e 1814 1815
+e 1815 1822
+e 1822 1821
+e 1821 1820
+e 1820 1834
+e 1834 1835
+e 1835 1836
+e 1836 1856
+e 1856 1837
+e 1837 1854
+e 1854 1852
+e 1852 1849
+e 1849 1847
+e 1847 1838
+e 1838 1839
+e 1839 1841
+e 1841 1858
+e 1858 1863
+e 1863 1827
+e 1827 1828
+e 1828 1829
+e 1829 1831
+e 1831 1832
+e 1843 1838
+e 1844 1838
+e 1845 1838
+e 1846 1838
+e 1814 1864
+e 1864 1813
+e 1816 1813
+e 1815 1816
+e 1816 1103
+e 1815 1823
+e 1823 1860
+e 1860 1824
+e 1824 1825
+e 1825 1826
+e 1824 1861
+e 1861 1830
+e 1830 1829
+e 1839 1840
+e 1842 1841
+e 1847 1851
+e 1849 1850
+e 1850 1848
+e 1853 1852
+e 1855 1854
+e 1819 1820
+e 1820 1818
+e 1818 1821
+e 1821 1817
+e 1817 1822
+e 1822 1818
+e 1819 1821
+e 1819 1818
+e 1818 1817
+e 1819 7
+e 1818 7
+e 1817 7
+e 1869 1864
+e 1882 1833
+e 1950 1968
+e 1969 1840
+e 1969 1968
+e 1972 1970
+e 1970 1971
+e 1971 1941
+e 1973 1857
+e 1972 1973
+e 1975 1989
+e 1989 1990
+e 1990 1978
+e 1989 1977
+e 1977 1976
+e 1977 1991
+e 1991 1974
+e 1991 1988
+e 1988 1987
+e 1987 1986
+e 1986 1983
+e 1983 1984
+e 1984 1985
+e 1985 1979
+e 1985 1980
+e 1984 1981
+e 1983 1982
+e 1988 1997
+e 1997 1987
+e 1997 1992
+e 1992 1993
+e 1993 1994
+e 1994 1995
+e 1995 1996
+e 1996 1998
+e 1998 2000
+e 2000 1999
+e 2012 1999
+e 1995 2012
+e 1994 2012
+e 1993 2012
+e 2002 2012
+e 1993 1987
+e 1992 1987
+e 2004 2003
+e 2003 2002
+e 2002 2001
+e 2004 2005
+e 1992 2004
+e 1993 2004
+e 1994 2011
+e 2011 2007
+e 1996 2013
+e 2013 2009
+e 2009 2006
+e 2006 2014
+e 2013 2008
+e 2010 1990
+e 2016 2015
+e 2016 1975
+e 1857 1835
 m  0.0 0.0 0.0 0.0 0.0 
 m campusmap.png -1.0464134 2.3540468 1.0 0.0 1.0 Campus_Map
 m Alden00.png 890.23303 1334.5698 -1.0 190.0 0.19 Alden_Hall_00
