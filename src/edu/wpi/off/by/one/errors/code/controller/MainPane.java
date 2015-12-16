@@ -231,7 +231,7 @@ public class MainPane extends StackPane {
 	 */
 	public void showEmailPane(boolean visible){
 		smsEmailContainer.visibleProperty().set(visible);
-		emailPane.setVisible(visible);
+		emailPane.show(visible);
 		smsPane.setVisible(!visible);
 	}
 
