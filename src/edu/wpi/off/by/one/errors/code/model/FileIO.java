@@ -77,7 +77,7 @@ public class FileIO {
 	 * @return 1 if success
 	 */
 	static int parsemapline(String[] args, Display dpy){
-		//for(String s : args) System.out.println("arg:" + s);
+		//for(String s : args) .println("arg:" + s);
 		Coordinate c = new Coordinate(Float.parseFloat(args[1]), Float.parseFloat(args[2]), Float.parseFloat(args[3]));
 		Map m = new Map(args[0], c, Float.parseFloat(args[4]), Float.parseFloat(args[5]));
 		if(args.length > 6) m.setName(getTags(args[6])[0]);
@@ -85,7 +85,7 @@ public class FileIO {
 		return 1;
 	}
 	static int parsesteckline(String[] args, Display dpy){
-		for(String s : args) System.out.println("arg:" + s);
+		//for(String s : args) System.out.println("arg:" + s);
 		if(args.length < 2) return 0;
 		if(args[0] == null) return 0;
 		dpy.addmapstack(args[0]);
