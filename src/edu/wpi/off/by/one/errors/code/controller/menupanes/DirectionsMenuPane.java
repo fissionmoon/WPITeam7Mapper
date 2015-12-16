@@ -38,8 +38,6 @@ public class DirectionsMenuPane extends BorderPane {
 	@FXML Button routeButton;
     @FXML private ListView<String> directionsListView;
     @FXML CheckBox accessibleCheckbox;
-    @FXML Button emailButton;
-    @FXML Button smsButton;
     @FXML ComboBox carrierChoiceBox;
 
     private SettingsMenuPane settingsMenuPane;
@@ -125,7 +123,8 @@ public class DirectionsMenuPane extends BorderPane {
     }
     
     @FXML private void onEmailButtonClick(){
-        settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
+		ControllerSingleton.getInstance().getMainPane().showEmailPane(true);
+        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
         String userEmail = settingsMenuPane.getUserEmail();
         List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
         String userName = settingsMenuPane.getUserName();
@@ -134,18 +133,13 @@ public class DirectionsMenuPane extends BorderPane {
             body += (s + "\n");
         }
         GoogleMail googleMail = new GoogleMail();
-        googleMail.send(userEmail, "Directions from goatThere()", body);
-    }
-    public void disableEmailButton(boolean b){
-        emailButton.setDisable(b);
-    }
-    public void disableSMSButton(boolean b){
-    	smsButton.setDisable(b);
+        googleMail.send(userEmail, "Directions from goatThere()", body);*/
     }
     
     @FXML private void onSMSButtonClick(){
+		ControllerSingleton.getInstance().getMainPane().showSMSPane(true);
 
-        settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
+        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
         String userName = settingsMenuPane.getUserName();
 
         List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
@@ -161,27 +155,7 @@ public class DirectionsMenuPane extends BorderPane {
         String output = "";
         int count = 0;
 
-        sendMessage(body);
-        /*
-        if (body.length() % 300 == 0){
-	        for (int i=0; i< numMessage; i++){   
-		        body.getChars(count, count+300, message, 0);
-		        output = new String(message);
-		        sendMessage(output);
-		        count = count + 300;
-	        }
-        }else{
-        	for (int i=0; i< numMessage; i++){   
-		        body.getChars(count, count+300, message, 0);
-		        output = new String(message);
-		        sendMessage(output);
-		        count = count + 300;
-	        }
-        	body.getChars(count, body.length(), message, 0);
-        	output = new String(message);
-        	sendMessage(output);
-        }
-        */
+        sendMessage(body);*/
 
     }
 
