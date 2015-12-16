@@ -138,13 +138,13 @@ public class FileIO {
 		}
 		if(args.length >=5){
 			String flags = args[4];
-			if(flags.contains("a"))n.setAccessible(true);
-			if(flags.contains("e"))n.setElevator(true);
-			if(flags.contains("f"))n.setFood(true);
-			if(flags.contains("g"))n.setGenderNeutral(true);
-			if(flags.contains("m"))n.setMens(true);
-			if(flags.contains("w"))n.setWomens(true);
-			if(flags.contains("s"))n.setStairs(true);
+			if(flags.contains("a"))n.setAccessible(true); else n.setAccessible(false);
+			if(flags.contains("e"))n.setElevator(true); else n.setElevator(false);
+			if(flags.contains("f"))n.setFood(true); else n.setFood(false);
+			if(flags.contains("g"))n.setGenderNeutral(true); else n.setGenderNeutral(false);
+			if(flags.contains("m"))n.setMens(true); else n.setMens(false);
+			if(flags.contains("w"))n.setWomens(true); else n.setWomens(false);
+			if(flags.contains("s"))n.setStairs(true); else n.setStairs(false);
 		}
 		if(args.length >=6){
 			String stackname = args[5];
