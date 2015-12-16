@@ -490,7 +490,7 @@ public ArrayList<Step> getSteps(){
 	
 	for(Id cur : route){
 		Node n = theGraph.returnNodeById(cur);
-		Step step = new Step(n, lastNode);
+		
 		if(n == null) continue;
 		Coordinate thiscoord = n.getCoordinate();
 		if(lastcoord != null){
@@ -512,6 +512,11 @@ public ArrayList<Step> getSteps(){
 						res += ("Walk for " + Math.round(distFromTurn) + " paces " + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
 					}
 					res += ("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
+					Step step = new Step(n, lastNode);
+					step.setInstructions(res);
+					steps.add(step);
+					lastNode = n;
+					res = "";
 					distFromTurn = dist;
 				} else if (degreedangle <= 90){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
@@ -519,18 +524,32 @@ public ArrayList<Step> getSteps(){
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
 					res += ("Make a " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
+					Step step = new Step(n, lastNode);
+					step.setInstructions(res);
+					steps.add(step);
+					lastNode = n;
+					res = "";
 				} else if (degreedangle <= 180){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 						res += ("Walk for " + Math.round(distFromTurn) + " meters");
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
 					res += ("Make a hard " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
+					Step step = new Step(n, lastNode);
+					step.setInstructions(res);
+					steps.add(step);
+					lastNode = n;
+					res = "";
 				} else {
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 						res += ("Walk for " + Math.round(distFromTurn) + " meters");
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
 					res += ("Make a sharp " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
+					Step step = new Step(n, lastNode);
+					step.setInstructions(res);
+					steps.add(step);
+					lastNode = n;
 				}
 			} else {
 				if((-45 <= angle && angle < 45)){
@@ -542,17 +561,17 @@ public ArrayList<Step> getSteps(){
 				} else {
 					res += ("Face north");
 				}
+				Step step = new Step(n, lastNode);
+				step.setInstructions(res);
+				steps.add(step);
+				lastNode = n;
+				res = "";
 				distFromTurn = dist;
 			}
 			lastangle = angle;
 		}
 		lastcoord = thiscoord;
-		
-		step.setInstructions(res);
-		steps.add(step);
-		lastNode = n;
 		cnt++;
-		res = "";
 	}
 	res = "";
 	if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
