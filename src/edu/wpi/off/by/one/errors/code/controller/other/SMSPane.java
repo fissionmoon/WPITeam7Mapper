@@ -71,7 +71,6 @@ public class SMSPane extends BorderPane {
         int count = 0;
 
         return body;
-        //sendMessage(body);
 
     }
 
@@ -143,7 +142,13 @@ public class SMSPane extends BorderPane {
                 "T-Mobile", "U.S. Cellular", "Verizon", "Virgin Mobile");
     }
 
-    @FXML private void onSendSMSButtonClick(){
+    @FXML protected void onSendSMSButtonClick(){
         sendMessage(smsBody.getText());
+        ControllerSingleton.getInstance().getMainPane().showSMSPane(false);
+    }
+
+    public void show(boolean b){
+        this.setVisible(b);
+        addInput();
     }
 }

@@ -30,4 +30,18 @@ public class EmailPane extends BorderPane {
         ControllerSingleton.getInstance().getMainPane().showEmailPane(false);
     }
     //endregion
+
+    @FXML private void onSendButtonClick(){
+        ControllerSingleton.getInstance().getMainPane().showEmailPane(true);
+        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
+        String userEmail = settingsMenuPane.getUserEmail();
+        List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
+        String userName = settingsMenuPane.getUserName();
+        String body = "Hello "+ userName + "!\n";
+        for (String s : directions){
+            body += (s + "\n");
+        }
+        GoogleMail googleMail = new GoogleMail();
+        googleMail.send(userEmail, "Directions from goatThere()", body);*/
+    }
 }
