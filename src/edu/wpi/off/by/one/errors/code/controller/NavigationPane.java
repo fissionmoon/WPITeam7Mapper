@@ -148,8 +148,8 @@ public class NavigationPane extends GridPane{
 
         Node st = directionsList.get(currentInstructionIndex).getStart();
         Node et = directionsList.get(currentInstructionIndex).getEnd();
-        ControllerSingleton.getInstance().getMapRootPane().r1 = et;
-        ControllerSingleton.getInstance().getMapRootPane().r2 = st;
+       // ControllerSingleton.getInstance().getMapRootPane().r1 = et;
+        //ControllerSingleton.getInstance().getMapRootPane().r2 = st;
         if(direction) {
             Node tt = st;
             st = et;

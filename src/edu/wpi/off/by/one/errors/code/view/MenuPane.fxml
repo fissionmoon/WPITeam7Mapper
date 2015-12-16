@@ -18,7 +18,7 @@
                             </toggleGroup>
                         </RadioButton>
                         <RadioButton fx:id="directionsMenuRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#expand" prefHeight="50.0" prefWidth="50.0" styleClass="toggle-button" toggleGroup="$menuButtonToggleGroup" />
-                        <RadioButton fx:id="favoritesMenuRadioButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#expand" prefHeight="50.0" prefWidth="50.0" styleClass="toggle-button" toggleGroup="$menuButtonToggleGroup" />
+                        <RadioButton fx:id="favoritesMenuRadioButton" visible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#expand" prefHeight="50.0" prefWidth="50.0" styleClass="toggle-button" toggleGroup="$menuButtonToggleGroup" />
                     </children>
                 </VBox>
             </center>
