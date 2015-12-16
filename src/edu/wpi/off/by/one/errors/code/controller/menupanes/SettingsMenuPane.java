@@ -91,21 +91,17 @@ public class SettingsMenuPane extends BorderPane {
                // printWriter.println(PHONE_LINE_ID + phoneTextField.getText());
                 if(isEmailValid()) {
                     printWriter.println(EMAIL_LINE_ID + emailTextField.getText());
-                    ControllerSingleton.getInstance().getMenuPane().getDirectionsMenuPane().disableEmailButton(false);
                     emailTextField.hideErrorLabel();
                 }
                 else {
                     emailTextField.showErrorLabel("!Error Invalid Email");
-                    ControllerSingleton.getInstance().getMenuPane().getDirectionsMenuPane().disableEmailButton(true);
                 }
                 if(isNumberValid()) {
                     printWriter.println(PHONE_LINE_ID + phoneTextField.getText());
-                    ControllerSingleton.getInstance().getMenuPane().getDirectionsMenuPane().disableSMSButton(false);
                     phoneTextField.hideErrorLabel();
                 }
                 else {
                     phoneTextField.showErrorLabel("!Error Invalid Phone Number");
-                    ControllerSingleton.getInstance().getMenuPane().getDirectionsMenuPane().disableSMSButton(true);
                 }
                 printWriter.close();
             }catch (IOException excpt){
