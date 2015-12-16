@@ -52,9 +52,8 @@
             <children>
                 <MenuButton text="Share">
                     <items>
-                        <MenuItem text="Print"/>
-                        <MenuItem text="Email"/>
-                        <MenuItem text="SMS"/>
+                        <MenuItem text="Email" onAction="#onEmailButtonClick"/>
+                        <MenuItem text="SMS" onAction="#onSMSButtonClick"/>
                     </items>
                 </MenuButton>
             </children>
