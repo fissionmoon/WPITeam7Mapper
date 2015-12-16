@@ -149,6 +149,8 @@ public class SMSPane extends BorderPane {
 
     public void show(boolean b){
         this.setVisible(b);
-        addInput();
+
+        if(b)
+            addInput();
     }
 }
