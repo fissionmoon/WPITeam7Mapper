@@ -114,6 +114,9 @@ public class MapRootPane extends AnchorPane{
 
 	ArrayList<Matrix> oldmapinv;
 
+	Node r1 = null;
+	Node r2 = null;
+
     
     public MapRootPane() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/wpi/off/by/one/errors/code/view/MapRootPane.fxml"));
@@ -465,6 +468,22 @@ public class MapRootPane extends AnchorPane{
 				
 			}
 
+
+
+
+			if(r1 != null && r2 != null) {
+				mygc.save();
+				Coordinate ac = view.transform(r1.getCoordinate());
+				Coordinate bc = view.transform(r2.getCoordinate());
+				if ((translate.getZ() > r1.getCoordinate().getZ() + 0.1 || translate.getZ() < r1.getCoordinate().getZ() - 0.1) && (translate.getZ() > r2.getCoordinate().getZ() + 0.1 || translate.getZ() < r2.getCoordinate().getZ() - 0.1)) {
+				} else {
+					mygc.setLineWidth(5.0f);
+						mygc.setStroke(Color.RED);
+						mygc.setLineDashes(null);
+					mygc.strokeLine(ac.getX(), ac.getY(), bc.getX(), bc.getY());
+				}
+				mygc.restore();
+			}
 
 			//render big red X
 			if(currentRoute != null){
