@@ -443,15 +443,11 @@ public class Path {
 						distFromTurnMeter += dist;
 					} else if(degreedangle <= 45){
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-<<<<<<< HEAD
-							res.add("Walk for " + Math.round(distFromTurn) + unit);
-						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
-=======
+
 							res.add("Walk for " + Math.round(distFromTurn) + " meters " + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
 						}else{ 
 							res.add("Walk for " + Math.round(distFromTurn) + " paces "  + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
 						}
->>>>>>> upstream/dev
 						res.add("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurnMeter = dist;
 					} else if (degreedangle <= 90){
@@ -530,11 +526,11 @@ public ArrayList<Step> getSteps(){
 					distFromTurn += dist;
 				} else if(degreedangle <= 45){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-						res += ("Walk for " + Math.round(distFromTurn) + " meters " + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
+						res += ("Walk for " + Math.round(distFromTurn) + " meters " + (!n.getName().isEmpty() ? "towards" : "") + n.getName());
 					}else{ 
-						res += ("Walk for " + Math.round(distFromTurn) + " paces " + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
+						res += ("Walk for " + Math.round(distFromTurn) + " paces " + (!n.getName().isEmpty() ? "towards" : "") + n.getName());
 					}
-					res += ("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
+					res += (" and make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
 					Step step = new Step(n, lastNode);
 					step.setInstructions(res);
 					steps.add(step);
@@ -545,7 +541,7 @@ public ArrayList<Step> getSteps(){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 						res += ("Walk for " + Math.round(distFromTurn) + " meters");
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
-					res += ("Make a " + (dxangle>=0 ? "right" : "left")+ " turn");
+					res += (" and  make a " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
 					Step step = new Step(n, lastNode);
 					step.setInstructions(res);
@@ -556,7 +552,7 @@ public ArrayList<Step> getSteps(){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 						res += ("Walk for " + Math.round(distFromTurn) + " meters");
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
-					res += ("Make a hard " + (dxangle>=0 ? "right" : "left")+ " turn");
+					res += (" and make a hard " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
 					Step step = new Step(n, lastNode);
 					step.setInstructions(res);
@@ -567,7 +563,7 @@ public ArrayList<Step> getSteps(){
 					if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 						res += ("Walk for " + Math.round(distFromTurn) + " meters");
 					}else res += ("Walk for " + Math.round(distFromTurn) + " paces");
-					res += ("Make a sharp " + (dxangle>=0 ? "right" : "left")+ " turn");
+					res += ("and make a sharp " + (dxangle>=0 ? "right" : "left")+ " turn");
 					distFromTurn = dist;
 					Step step = new Step(n, lastNode);
 					step.setInstructions(res);
@@ -599,10 +595,10 @@ public ArrayList<Step> getSteps(){
 	res = "";
 	if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
 		res += ("Walk for " + Math.round(distFromTurn) + " meters");
-		res += ("You have reached your destination");
+		res += (" and you have reached your destination");
 	}else {
 		res += ("Walk for " + Math.round(distFromTurn) + " paces");
-		res += ("You have found the booty");
+		res += (" and you have found the booty");
 	}
 	
 	Step step = new Step(null, lastNode);
