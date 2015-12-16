@@ -72,6 +72,7 @@ public class DirectionsMenuPane extends BorderPane {
 			for(int i = 0; i < ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().size(); i++){
 				System.out.println(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().get(i).toString());
 			}
+			ControllerSingleton.getInstance().getNavigationPane().nodezoomcheck(true);
 		});
 	}
 	

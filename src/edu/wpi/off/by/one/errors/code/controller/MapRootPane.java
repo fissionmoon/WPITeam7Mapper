@@ -762,6 +762,7 @@ public class MapRootPane extends AnchorPane{
     				endMarker = new MarkerDisplay(nearestNode.getCoordinate().getX(), nearestNode.getCoordinate().getY(), level, Marker.END);
     				endMarker.setNodePoint(nearestNodeId);
     				drawPath(startMarker.getNodePoint(), endMarker.getNodePoint());
+    				showDirections();showDirections();
     				//markerPane.getChildren().add(endMarker);
     			}
     			if(startMarker == null && nodeQueue.size() == 0) {
@@ -1042,9 +1043,10 @@ public class MapRootPane extends AnchorPane{
 
         //startNode.fireEvent(selectNodeEvent);
         //endNode.fireEvent(selectNodeEvent);
+        showDirections();
         endMarker = null;
         startMarker = null;
-        showDirections();
+        
 	}
 	public void drawMensRoomPath(){
 		pathPane.getChildren().clear();
@@ -1070,9 +1072,10 @@ public class MapRootPane extends AnchorPane{
 
         //startNode.fireEvent(selectNodeEvent);
         //endNode.fireEvent(selectNodeEvent);
+        showDirections();
         endMarker = null;
         startMarker = null;
-        showDirections();
+        
 	}
 	public void drawWomensRoomPath(){
 		pathPane.getChildren().clear();
@@ -1098,9 +1101,10 @@ public class MapRootPane extends AnchorPane{
 
         //startNode.fireEvent(selectNodeEvent);
         //endNode.fireEvent(selectNodeEvent);
+        showDirections();
         endMarker = null;
         startMarker = null;
-        showDirections();
+        
 	}
 	public void drawGenderNeutralRestroomPath(){
 		pathPane.getChildren().clear();
@@ -1126,9 +1130,10 @@ public class MapRootPane extends AnchorPane{
 
         //startNode.fireEvent(selectNodeEvent);
         //endNode.fireEvent(selectNodeEvent);
+        showDirections();
         endMarker = null;
         startMarker = null;
-        showDirections();
+        
 	}
 	
 	public void drawPath(Id nodeAId, Id nodeBId){
