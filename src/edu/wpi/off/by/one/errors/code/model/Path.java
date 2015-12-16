@@ -443,15 +443,10 @@ public class Path {
 						distFromTurnMeter += dist;
 					} else if(degreedangle <= 45){
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-<<<<<<< HEAD
-							res.add("Walk for " + Math.round(distFromTurn) + unit);
-						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
-=======
 							res.add("Walk for " + Math.round(distFromTurn) + " meters " + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
 						}else{ 
 							res.add("Walk for " + Math.round(distFromTurn) + " paces "  + (!n.getName().isEmpty() ? "towards " : "") + n.getName());
 						}
->>>>>>> upstream/dev
 						res.add("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
 						distFromTurnMeter = dist;
 					} else if (degreedangle <= 90){
