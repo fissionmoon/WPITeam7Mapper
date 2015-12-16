@@ -69,6 +69,7 @@ public class SearchMenuPane extends BorderPane {
 			String name = (m.getName() == null) ? m.getImgUrl() : m.getName();
 			buildingChoiceBox.getItems().add(name);
         }
+		buildingChoiceBox.setValue("Campus Map");
 	}
 	
 	@FXML private void setDirectionsTo(){

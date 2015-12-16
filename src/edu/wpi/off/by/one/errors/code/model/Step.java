@@ -13,6 +13,12 @@ public class Step {
 		this.endNode = endNode;
 		this.instruction = "";
 	}
+
+	public Step(){
+		this.startNode =  new Node(new Coordinate(-1));
+		this.endNode =  new Node(new Coordinate(-1));
+		this.instruction = "Add a new route";
+	}
 	
 	public Node getStart(){
 		return startNode;
