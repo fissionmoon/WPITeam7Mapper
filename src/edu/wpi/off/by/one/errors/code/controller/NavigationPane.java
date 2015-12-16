@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import edu.wpi.off.by.one.errors.code.controller.customcontrols.IconedLabel;
-import edu.wpi.off.by.one.errors.code.model.Node;
-import edu.wpi.off.by.one.errors.code.model.Step;
+import edu.wpi.off.by.one.errors.code.model.*;
 import javafx.animation.Animation;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
@@ -145,10 +144,111 @@ public class NavigationPane extends GridPane{
      * Listener for previous Button
      * Shows the previous instruction
      */
+    public void nodezoomcheck(boolean direction){
+
+        Node st = directionsList.get(currentInstructionIndex).getStart();
+        Node et = directionsList.get(currentInstructionIndex).getEnd();
+        ControllerSingleton.getInstance().getMapRootPane().r1 = et;
+        ControllerSingleton.getInstance().getMapRootPane().r2 = st;
+        if(direction) {
+            Node tt = st;
+            st = et;
+            et = tt;
+        }
+        if(et == null)return;
+        /*
+        if(st.mapstackname == null) {
+            if(et.mapstackname != null){
+                Mapstack ms = ControllerSingleton.getInstance().getMapRootPane().getDisplay().addmapstack(et.mapstackname);
+                if(ms.meps == null || ms.meps.size() < 1)return;
+                ArrayList<Map> meplist = ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps();
+                int m1 = ms.meps.get(0);
+                if(m1 > meplist.size())return;
+                Map m = meplist.get(m1);
+                if(m == null)return;
+                Coordinate c1 = ControllerSingleton.getInstance().getMapRootPane().translate;
+                ControllerSingleton.getInstance().getMainPane().dropStartC = c1;
+
+
+                ControllerSingleton.getInstance().getMainPane().dropStartR = ControllerSingleton.getInstance().getMapRootPane().rot;
+                ControllerSingleton.getInstance().getMainPane().dropStartS = ControllerSingleton.getInstance().getMapRootPane().zoom;
+
+                Matrix matrix = new Matrix(m.getRotation(),0,0,1).scale(m.getScale());
+                Coordinate coord = new Coordinate((float)m.getImage().getWidth()/2, (float)m.getImage().getHeight()/2, 0);
+                coord = matrix.transform(coord);
+
+                ControllerSingleton.getInstance().getMainPane().dropEndC = new Coordinate(-m.getCenter().getX()-coord.getX(), -m.getCenter().getY()-coord.getY(), et.getCoordinate().getZ());
+
+                ControllerSingleton.getInstance().getMainPane().dropEndR = -m.getRotation();
+                float mx = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getWidth()/(m.getImage().getWidth() * m.getScale()) );
+                float my = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getHeight()/(m.getImage().getHeight() * m.getScale()));
+                ControllerSingleton.getInstance().getMainPane().dropEndS = mx < my ? mx : my;
+                if(ControllerSingleton.getInstance().getMainPane().dropEndS <= 0.05f) ControllerSingleton.getInstance().getMainPane().dropEndS = 1.0f;
+                ControllerSingleton.getInstance().getMainPane().dropzoom.play();
+                ControllerSingleton.getInstance().getMapRootPane().render();
+            }
+        } else
+        */if(et.mapstackname == null){
+            ArrayList<Map> meplist = ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps();
+
+            Map m = null;
+            for(Map k : meplist) if(k != null && k.getName() != null && k.getName().equals("Campus Map")){m = k; break;}
+            if(m == null)return;
+            ControllerSingleton.getInstance().getMainPane().dropStartC =  ControllerSingleton.getInstance().getMapRootPane().translate;
+
+
+            ControllerSingleton.getInstance().getMainPane().dropStartR = ControllerSingleton.getInstance().getMapRootPane().rot;
+            ControllerSingleton.getInstance().getMainPane().dropStartS = ControllerSingleton.getInstance().getMapRootPane().zoom;
+
+            Matrix matrix = new Matrix(m.getRotation(),0,0,1).scale(m.getScale());
+            Coordinate coord = new Coordinate((float)m.getImage().getWidth()/2, (float)m.getImage().getHeight()/2, 0);
+            coord = matrix.transform(coord);
+
+            ControllerSingleton.getInstance().getMainPane().dropEndC = new Coordinate(-m.getCenter().getX()-coord.getX(), -m.getCenter().getY()-coord.getY(), et.getCoordinate().getZ());
+
+            ControllerSingleton.getInstance().getMainPane().dropEndR = -m.getRotation();
+            float mx = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getWidth()/(m.getImage().getWidth() * m.getScale()) );
+            float my = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getHeight()/(m.getImage().getHeight() * m.getScale()));
+            ControllerSingleton.getInstance().getMainPane().dropEndS = mx < my ? mx : my;
+            if(ControllerSingleton.getInstance().getMainPane().dropEndS <= 0.05f) ControllerSingleton.getInstance().getMainPane().dropEndS = 1.0f;
+            ControllerSingleton.getInstance().getMainPane().dropzoom.play();
+            ControllerSingleton.getInstance().getMapRootPane().render();
+        } else /*if(!st.mapstackname.equals(et.mapstackname))*/{
+            Mapstack ms = ControllerSingleton.getInstance().getMapRootPane().getDisplay().addmapstack(et.mapstackname);
+            if(ms.meps == null || ms.meps.size() < 1)return;
+            ArrayList<Map> meplist = ControllerSingleton.getInstance().getMapRootPane().getDisplay().getMaps();
+            int m1 = ms.meps.get(0);
+            if(m1 > meplist.size())return;
+            Map m = meplist.get(m1);
+            if(m == null)return;
+            Coordinate c1 = ControllerSingleton.getInstance().getMapRootPane().translate;
+            ControllerSingleton.getInstance().getMainPane().dropStartC = c1;
+
+
+            ControllerSingleton.getInstance().getMainPane().dropStartR = ControllerSingleton.getInstance().getMapRootPane().rot;
+            ControllerSingleton.getInstance().getMainPane().dropStartS = ControllerSingleton.getInstance().getMapRootPane().zoom;
+
+            Matrix matrix = new Matrix(m.getRotation(),0,0,1).scale(m.getScale());
+            Coordinate coord = new Coordinate((float)m.getImage().getWidth()/2, (float)m.getImage().getHeight()/2, 0);
+            coord = matrix.transform(coord);
+
+            ControllerSingleton.getInstance().getMainPane().dropEndC = new Coordinate(-m.getCenter().getX()-coord.getX(), -m.getCenter().getY()-coord.getY(), et.getCoordinate().getZ());
+
+            ControllerSingleton.getInstance().getMainPane().dropEndR = -m.getRotation();
+            float mx = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getWidth()/(m.getImage().getWidth() * m.getScale()) );
+            float my = (float)(ControllerSingleton.getInstance().getMapRootPane().canvas.getHeight()/(m.getImage().getHeight() * m.getScale()));
+            ControllerSingleton.getInstance().getMainPane().dropEndS = mx < my ? mx : my;
+            if(ControllerSingleton.getInstance().getMainPane().dropEndS <= 0.05f) ControllerSingleton.getInstance().getMainPane().dropEndS = 1.0f;
+            ControllerSingleton.getInstance().getMainPane().dropzoom.play();
+            ControllerSingleton.getInstance().getMapRootPane().render();
+        }
+    }
     @FXML protected void onPreviousButtonClick(){
         currentInstructionIndex -= 1;
+        if(currentInstructionIndex <=0)currentInstructionIndex = 0;
         if (currentInstructionIndex >= 0 && currentInstructionIndex< directionsList.size())
             instructionLabel.setText(directionsList.get(currentInstructionIndex).toString());
+        nodezoomcheck(false);
     }
 
     /**
@@ -157,8 +257,10 @@ public class NavigationPane extends GridPane{
      */
     @FXML protected void onNextButtonClick(){
         currentInstructionIndex += 1;
+        if(currentInstructionIndex >= directionsList.size())currentInstructionIndex = directionsList.size()-1;
         if (currentInstructionIndex >= 0 && currentInstructionIndex< directionsList.size())
             instructionLabel.setText(directionsList.get(currentInstructionIndex).toString());
+        nodezoomcheck(true);
     }
 
     /**

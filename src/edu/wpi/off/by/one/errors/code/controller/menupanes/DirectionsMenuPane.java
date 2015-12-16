@@ -72,6 +72,7 @@ public class DirectionsMenuPane extends BorderPane {
 			for(int i = 0; i < ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().size(); i++){
 				System.out.println(ControllerSingleton.getInstance().getMapRootPane().getPath().getSteps().get(i).toString());
 			}
+			ControllerSingleton.getInstance().getNavigationPane().nodezoomcheck(true);
 		});
 	}
 	
@@ -138,85 +139,6 @@ public class DirectionsMenuPane extends BorderPane {
     
     @FXML private void onSMSButtonClick(){
 		ControllerSingleton.getInstance().getMainPane().showSMSPane(true);
-
-        /*settingsMenuPane = ControllerSingleton.getInstance().getSettingsMenuPane();
-        String userName = settingsMenuPane.getUserName();
-
-        List<String> directions = ControllerSingleton.getInstance().getMapRootPane().getPath().getTextual();
-
-        String body = "Hello "+ userName + "!\n";
-
-        for (String s : directions){
-            body += (s + "\n");   
-        }
-
-        int numMessage = body.length() / 300;
-        char[] message = new char[301];
-        String output = "";
-        int count = 0;
-
-        sendMessage(body);*/
-
-    }
-
-    
-
-    public void sendMessage(String body){
-
-    String userNumber = settingsMenuPane.getUserNumber();
-    	
-    	GoogleMail googleMail = new GoogleMail();
-
-    	String carrier =settingsMenuPane.getCarrier();
-    	
-    	String user;
-    	switch(carrier){
-    		case "AT&T Wireless":
-    			user = userNumber + "@txt.att.net";
-    			break;
-    		case "Alltel Wireless":
-    			user = userNumber + "@text.wireless.alltel.com";
-    			break;
-    		case "AT&T Mobility":
-    			user = userNumber + "@cingularme.com";
-    			break;
-    		case "Boost Mobile":
-    			user = userNumber + "@myboostmobile.com";
-    			break;
-    		case "Cricket":
-    			user = userNumber + "@sms.mycricket.com";
-    			break;
-    		case "Metro PCS":
-    			user = userNumber + "@mymetropcs.com";
-    			break;
-    		case "Sprint PCS":
-    			user = userNumber + "@messaging.sprintpcs.com";
-    			break;
-    		case "Sprint Nextel":
-    			user = userNumber + "@page.nextel.com";
-    			break;
-    		case "Straight Talk":
-    			user = userNumber + "@vtext.com";
-    			break;
-    		case "T-Mobile":
-    			user = userNumber + "@tmomail.net";
-    			break;
-    		case "U.S. Cellular":
-    			user = userNumber + "@email.uscc.net";
-    			break;
-    		case "Verizon":
-    			user = userNumber + "@vtext.com";
-    			break;
-    		case "Virgin Mobile":
-    			user = userNumber + "@vmobl.com";
-    			break;
-    		default:
-    			user = userNumber + "@vtext.com";
-    			break;
-    			
-    	}
-        googleMail.send(user, "Directions from goatThere()", body);
-
 
     }
 
