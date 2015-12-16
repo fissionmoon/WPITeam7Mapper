@@ -404,6 +404,17 @@ public class Path {
 		Coordinate lastcoord = null;
 		float lastangle = -10000.0f;
 		float distFromTurn = 0;
+		float distFromTurnMeter = 0;
+		
+		String unit;
+		
+		boolean isMeter = ControllerSingleton.getInstance().getSettingsMenuPane().isMeter();
+		if (isMeter) {
+			unit = " meters";
+		}else{
+			unit = " feet";
+		}
+		
 		//float lastdist = 0.0f; TODO
 		for(Id cur : route){
 			Node n = theGraph.returnNodeById(cur);
@@ -415,6 +426,13 @@ public class Path {
 				float distsq =  mx * mx + my * my;
 				float dist = (float)Math.sqrt((double)distsq);
 				float angle = (float) (Math.atan2(mx, my)* 180 / Math.PI);
+				
+				if (isMeter){
+					distFromTurn = (float) (distFromTurnMeter * 0.72);
+				}else{
+					distFromTurn = (float) (distFromTurnMeter * 0.72 * 3.28);
+				}
+				
 				if(lastangle > -180.0f){
 					float dxangle = lastangle - angle;
 					float degreedangle = Math.abs(dxangle);
@@ -422,31 +440,31 @@ public class Path {
 					System.out.println(degreedangle);
 					System.out.println(dxangle);
 					if(Math.abs(degreedangle) <= 20){ //determines magnitude of turn
-						distFromTurn += dist;
+						distFromTurnMeter += dist;
 					} else if(degreedangle <= 45){
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+							res.add("Walk for " + Math.round(distFromTurn) + unit);
 						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a slight " + (dxangle>=0 ? "right" : "left")+ " turn");
-						distFromTurn = dist;
+						distFromTurnMeter = dist;
 					} else if (degreedangle <= 90){
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+							res.add("Walk for " + Math.round(distFromTurn) + unit);
 						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a " + (dxangle>=0 ? "right" : "left")+ " turn");
-						distFromTurn = dist;
+						distFromTurnMeter = dist;
 					} else if (degreedangle <= 180){
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+							res.add("Walk for " + Math.round(distFromTurn) + unit);
 						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a hard " + (dxangle>=0 ? "right" : "left")+ " turn");
-						distFromTurn = dist;
+						distFromTurnMeter = dist;
 					} else {
 						if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-							res.add("Walk for " + Math.round(distFromTurn) + " meters");
+							res.add("Walk for " + Math.round(distFromTurn) + unit);
 						}else res.add("Walk for " + Math.round(distFromTurn) + " paces");
 						res.add("Make a sharp " + (dxangle>=0 ? "right" : "left")+ " turn");
-						distFromTurn = dist;
+						distFromTurnMeter = dist;
 					}
 				} else {
 					if((-45 <= angle && angle < 45)){
@@ -458,7 +476,7 @@ public class Path {
 					} else {
 						res.add("Face north");
 					}
-					distFromTurn = dist;
+					distFromTurnMeter = dist;
 				}
 				lastangle = angle;
 			}
@@ -466,7 +484,7 @@ public class Path {
 			cnt++;
 		}
 		if(!ControllerSingleton.getInstance().getMapRootPane().isPirateMode){
-		res.add("Walk for " + Math.round(distFromTurn) + " meters");
+		res.add("Walk for " + Math.round(distFromTurn) + unit);
 		res.add("You have reached your destination");
 		}else {
 			res.add("Walk for " + Math.round(distFromTurn) + " paces");
