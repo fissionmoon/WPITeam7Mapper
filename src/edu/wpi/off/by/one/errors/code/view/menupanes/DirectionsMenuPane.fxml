@@ -5,7 +5,6 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import edu.wpi.off.by.one.errors.code.controller.customcontrols.AutoCompleteNameTextField?>
 <?import edu.wpi.off.by.one.errors.code.controller.customcontrols.ClearableTextField?>
 <fx:root type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <top>
@@ -16,8 +15,8 @@
                     <center>
                         <VBox spacing="10">
                             <children>
-                                <AutoCompleteNameTextField fx:id="originTextField" promptText="From" minWidth="0.0" BorderPane.alignment="CENTER" />
-                                <AutoCompleteNameTextField fx:id="destinationTextField" promptText="To" minWidth="0.0" BorderPane.alignment="CENTER" />
+                                <ClearableTextField fx:id="originTextField" promptText="From" minWidth="0.0" BorderPane.alignment="CENTER" />
+                                <ClearableTextField fx:id="destinationTextField" promptText="To" minWidth="0.0" BorderPane.alignment="CENTER" />
                             </children>
                         </VBox>
                     </center>
